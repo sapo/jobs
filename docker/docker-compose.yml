@@ -1,29 +1,30 @@
 version: "3.3"
 services:
-   nginx:
-     build: ./nginx/
-     ports:
-       - 90001:80
+    nginx:
+      build: ./nginx/
+      ports:
+        - 9901:80
 
-     volumes:
-        - ./:/var/www/html/
+      volumes:
+          - ./../backend/public/:/var/www/html/
 
-  #  php:
-  #    build: ./php/
-  #    expose:
-  #      - 9000
-  #    volumes:
-  #       - ./:/var/www/html/
+    php:
+      build: ./php/
+      expose:
+        - 9000
+      volumes:
+          - ./../backend/:/project/
+          - ./../backend/public/:/var/www/html/
 
-  # mysql:
-  #   image: mysql
-  #   restart: always
-  #   environment:
-  #     MYSQL_DATABASE: 'database_1'
-  #     MYSQL_USER: 'test_user'
-  #     MYSQL_PASSWORD: 'test_password'
-  #     MYSQL_ROOT_PASSWORD: 'root_password'
-  #   ports:
-  #      - 33006:3306
-  #   volumes:
-  #     - ./mysql/my-db:/var/lib/mysql
+    db:
+      image: mysql
+      restart: always
+      environment:
+        MYSQL_DATABASE: 'database_1'
+        MYSQL_USER: 'test_user'
+        MYSQL_PASSWORD: 'test_password'
+        MYSQL_ROOT_PASSWORD: 'root_password'
+      ports:
+        - 9902:3306
+      volumes:
+        - ./mysql/my-db:/var/lib/mysql

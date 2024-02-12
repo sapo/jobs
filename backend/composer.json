@@ -1,0 +1,20 @@
+{
+    "name": "sapo/jobs",
+    "type": "service",
+    "description": "",
+    "license": "Private",
+    "authors": [
+        {
+            "name": "Rúben Simões",
+            "email": "ruben-r-simoes@telecom.pt"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SAPO\\Jobs\\": "src/"
+        }
+    },
+    "require" : {
+        "php": ">=8.1"
+    }
+}

@@ -1,6 +1,5 @@
 <template>
     <div id="navigation_menu">
-        <!-- <h4>Project</h4> -->
         <ul>
             <li>
                 <RouterLink to="/">
@@ -10,25 +9,49 @@
             </li>
 
             <li>
-                <RouterLink to="/example1">
+                <RouterLink to="/backend-1">
                     <i class="fab fa-php"></i>
-                    Backend - Example 1
+                    Backend - Exercise 1
                 </RouterLink>
             </li>
 
             <li>
-                <RouterLink to="/example2">
-                    <i class="fas fa-code"></i>
-                    Example 2
+                <RouterLink to="/backend-2">
+                    <i class="fab fa-php"></i>
+                    Backend - Exercise 2
                 </RouterLink>
             </li>
-            <!-- <li><RouterLink to="/about">About</RouterLink></li>
-            <li><RouterLink to="/contact">Contact</RouterLink></li> -->
+
+            <li>
+                <RouterLink to="/backend-3">
+                    <i class="fab fa-php"></i>
+                    Backend - Exercise 1
+                </RouterLink>
+            </li>
+
+            <li>
+                <RouterLink to="/frontend-1">
+                    <i class="fab fa-vuejs"></i>
+                    Frontend - Exercise 1
+                </RouterLink>
+            </li>
+
+            <li>
+                <RouterLink to="/frontend-2">
+                    <i class="fab fa-vuejs"></i>
+                    Frontend - Exercise 2
+                </RouterLink>
+            </li>
+
+            <li>
+                <RouterLink to="/frontend-3">
+                    <i class="fab fa-vuejs"></i>
+                    Frontend - Exercise 3
+                </RouterLink>
+            </li>
         </ul>
     </div>
-
 </template>
-
 
 <script setup>
   import { RouterLink } from 'vue-router'

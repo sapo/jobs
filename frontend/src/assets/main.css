@@ -164,9 +164,14 @@ main .block .code {
   background: #282c34;
   color: #fff;
   margin: 0 0 12px 0;
+  font-size: 13px;
 }
 
 main .block .code p {
   margin: 0;
   padding: 2px 0;
+}
+
+main a {
+  color: #7ab800;
 }

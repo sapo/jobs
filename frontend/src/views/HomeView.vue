@@ -60,6 +60,11 @@
         <p>composer install</p>
         <p>docker-compose up -d</p>
       </div>
+
+      <p>
+        Test Backend API: <a target="_blank" href="http://localhost:9901/test-api.php">http://localhost:9901/test-api.php</a> <br>
+        An Hello World message should be displayed.
+      </p>
     </div>
 
   </main>
