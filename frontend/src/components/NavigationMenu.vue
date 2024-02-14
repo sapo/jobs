@@ -9,13 +9,13 @@
             </li>
 
             <li>
-                <RouterLink to="/backend-1">
+                <RouterLink to="/backend-overview">
                     <i class="fab fa-php"></i>
-                    Backend - Exercise 1
+                    Backend - Overview
                 </RouterLink>
             </li>
 
-            <li>
+            <!-- <li>
                 <RouterLink to="/backend-2">
                     <i class="fab fa-php"></i>
                     Backend - Exercise 2
@@ -48,7 +48,7 @@
                     <i class="fab fa-vuejs"></i>
                     Frontend - Exercise 3
                 </RouterLink>
-            </li>
+            </li> -->
         </ul>
     </div>
 </template>

@@ -1,14 +1,13 @@
 version: "3.3"
 services:
-    nginx:
+    sapo_nginx:
       build: ./nginx/
       ports:
-        - 9901:80
-
+        - 9980:80
       volumes:
           - ./../backend/public/:/var/www/html/
 
-    php:
+    sapo_php:
       build: ./php/
       expose:
         - 9000
@@ -16,7 +15,7 @@ services:
           - ./../backend/:/project/
           - ./../backend/public/:/var/www/html/
 
-    db:
+    sapo_db:
       image: mysql
       restart: always
       environment:
@@ -25,6 +24,6 @@ services:
         MYSQL_PASSWORD: 'test_password'
         MYSQL_ROOT_PASSWORD: 'root_password'
       ports:
-        - 9902:3306
+        - 9906:3306
       volumes:
         - ./mysql/my-db:/var/lib/mysql

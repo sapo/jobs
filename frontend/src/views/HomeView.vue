@@ -13,18 +13,20 @@
       <p>
         It also covers many of the fundamental concepts of PHP development, including API development, database interaction, and basic security practices.
       </p>
+    </div>
 
-      <h4>Requirements</h4>
+    <h3>Requirements</h3>
 
+    <div class="block">
       <p>Please make sure you have the following requirements installed in your local environment before running the project:</p>
       <div class="code">
         <p>Npm 8+</p>
         <p>NodeJS 18+</p>
         <p>Docker</p>
         <p>Docker Compose</p>
-        <p>PHP 8.1+</p>
         <p>Composer</p>
       </div>
+
     </div>
 
     <h3>Project Setup</h3>
@@ -49,22 +51,15 @@
       <p>
         The frontend will be running on the server given by the develop tool.
       </p>
-    </div>
 
-    <h3>Backend Setup</h3>
+      <h4>Backend Setup</h4>
 
-    <div class="block">
       <p>Install all the PHP and Docker components and run the following commands in the correct folders:</p>
 
       <div class="code">
         <p>composer install</p>
         <p>docker-compose up -d</p>
       </div>
-
-      <p>
-        Test Backend API: <a target="_blank" href="http://localhost:9901/test-api.php">http://localhost:9901/test-api.php</a> <br>
-        An Hello World message should be displayed.
-      </p>
     </div>
 
   </main>

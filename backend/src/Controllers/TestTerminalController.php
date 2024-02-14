@@ -2,9 +2,9 @@
 
 namespace SAPO\Jobs\Controllers;
 
-use SAPO\Jobs\Application\BaseAPIController;
+use SAPO\Jobs\Application\BaseTerminalController;
 
-class TestApiController extends BaseAPIController
+class TestTerminalController extends BaseTerminalController
 {
     public function execute()
     {

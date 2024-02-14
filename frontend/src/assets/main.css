@@ -116,16 +116,17 @@ main {
 main h1 {
   padding: 0px 10px;
   margin: 0;
-  border-bottom: 2px solid #eee;
+  border-left: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
   color: #555;
-  border-left: 2px solid #eee;
+
 }
 
 main .block {
   margin: 10px 0;
   padding: 12px 12px 1px 12px;
   background: #f9f9f9;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 main ul {
@@ -136,30 +137,36 @@ main ul {
 main ul li {
   margin: 0;
   padding: 2px 0;
-  font-size: 15px;
 }
 
 main p {
   padding: 0;
   margin: 0 0 12px 0;
+  line-height: 19px;
 }
 
 main h3 {
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #ccc;
   margin: 0 0 5px 0;
   padding: 0px 0 3px 2px;
   margin: 0;
 }
 
 main h4 {
-  border-left: 2px solid #eee;
-  background: #e5e5e5;
+  border-left: 2px solid #ccc;
   margin: 0 0 10px 0;
   padding: 7px;
-
+  font-size: 15px;
 }
 
-main .block .code {
+main h5 {
+  margin: 0 0 10px 0;
+  padding: 7px 0;
+  font-size: 15px;
+}
+
+main .block .code,
+main .block .quote {
   padding: 10px;
   background: #282c34;
   color: #fff;
@@ -167,10 +174,24 @@ main .block .code {
   font-size: 13px;
 }
 
-main .block .code p {
+main .block .code p,
+main .block .quote p {
   margin: 0;
   padding: 2px 0;
+  line-height: 15px;
 }
+
+
+main .block .quote {
+  background: #eee;
+  border-left: 3px solid #7ab800;
+  color: #555;
+}
+
+main .block .code {
+  border-left: 2px solid #00a2ff;
+}
+
 
 main a {
   color: #7ab800;
