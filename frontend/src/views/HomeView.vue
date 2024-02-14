@@ -45,7 +45,7 @@
       <div class="code">
         <p>cd frontend</p>
         <p>npm install</p>
-        <p>npm run serve</p>
+        <p>npm run dev</p>
       </div>
 
       <p>

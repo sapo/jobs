@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView                           from '../views/HomeView.vue'
 import InterviewObjectivesView            from '../views/InterviewObjectivesView.vue'
-import BackendOverviewView                from '../views/BackendOverviewView.vue'
+import ProjectOverviewView                from '../views/ProjectOverviewView.vue'
+import HTTPRequestView                    from '../views/Exercises/HTTPRequestView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,9 +20,15 @@ const router = createRouter({
     },
 
     {
-      path: '/backend-overview',
-      name: 'backend-overview',
-      component: BackendOverviewView
+      path: '/project-overview',
+      name: 'project-overview',
+      component: ProjectOverviewView
+    },
+
+    {
+      path: '/ex-vue-http-request',
+      name: 'ex-vue-http-request',
+      component: HTTPRequestView
     },
 
     // {

@@ -14,7 +14,6 @@ Npm 8+
 NodeJS 18+
 Docker
 Docker Compose
-PHP 8.1+
 Composer
 ```
 

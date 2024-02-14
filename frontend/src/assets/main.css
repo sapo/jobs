@@ -100,6 +100,13 @@ a {
   color: #777;
 }
 
+#navigation_menu li.header {
+  margin: 0;
+  padding: 10px 0 5px;
+  color: #555;
+  font-weight: bold;
+  font-size: 14px;
+}
 
 #navigation_menu h3 {
   color: #444;
@@ -161,7 +168,7 @@ main h4 {
 
 main h5 {
   margin: 0 0 10px 0;
-  padding: 7px 0;
+  padding: 0 0 7px 0;
   font-size: 15px;
 }
 
@@ -195,4 +202,34 @@ main .block .code {
 
 main a {
   color: #7ab800;
+}
+
+
+main .table-50 div {
+  display: table;
+  width: 50%;
+}
+
+main .table-50 .row {
+  display:table-row;
+  width:auto;
+}
+
+
+main .table-50 .cell
+{
+    float:left;/*fix for  buggy browsers*/
+    display:table-column;
+    width:200px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 10px 0;
+  border: none;
+  background: #7ab800;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 5px;
 }

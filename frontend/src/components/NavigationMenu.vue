@@ -11,46 +11,28 @@
 
             <li>
                 <RouterLink to="/interview-objectives">
-                    <i class="fas fa-user-graduate"></i>
+                    <i class="fas fa-info-circle"></i>
+                    
                     Interview Objectives
                 </RouterLink>
             </li>
 
             <li>
-                <RouterLink to="/backend-overview">
-                    <i class="fab fa-php"></i>
-                    Backend Overview
+                <RouterLink to="/project-overview">
+                    <i class="fas fa-file-code"></i>
+                    Project Overview
                 </RouterLink>
             </li>
 
-
-            <!-- <li>
-                <RouterLink to="/backend-3">
-                    <i class="fab fa-php"></i>
-                    Backend - Exercise 1
-                </RouterLink>
-            </li>
+            <li class="header">Exercises</li>
 
             <li>
-                <RouterLink to="/frontend-1">
+                <RouterLink to="/ex-vue-http-request">
                     <i class="fab fa-vuejs"></i>
-                    Frontend - Exercise 1
+                    <!-- <i class="fas fa-user-graduate"></i> -->
+                    HTTP Request
                 </RouterLink>
             </li>
-
-            <li>
-                <RouterLink to="/frontend-2">
-                    <i class="fab fa-vuejs"></i>
-                    Frontend - Exercise 2
-                </RouterLink>
-            </li>
-
-            <li>
-                <RouterLink to="/frontend-3">
-                    <i class="fab fa-vuejs"></i>
-                    Frontend - Exercise 3
-                </RouterLink>
-            </li> --> -->
         </ul>
     </div>
 </template>

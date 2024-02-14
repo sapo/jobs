@@ -3,7 +3,7 @@
         <h1>Interview Objectives</h1>
 
         <div class="block">
-            <h4>Tecnologies</h4>
+            <h5>Tecnologies</h5>
             <p>
                 During the interview process a number of different topics may be covered and the candidate will be asked to demonstrate, discuss, and write code using this project as a workflow. <br>
                 It will be assumed that the candidate has a good understanding of the following technologies and concepts:
@@ -23,7 +23,7 @@
                 <p>CLI Applications</p>
             </div>
 
-            <h4>Project Convenctions</h4>
+            <h5>Project Convenctions</h5>
             <p>
                 The project follows a number of conventions and best practices that the candidate should be aware of.
             </p>

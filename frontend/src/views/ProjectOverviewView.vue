@@ -1,6 +1,6 @@
 <template>
     <main>
-        <h1>Backend Overview</h1>
+        <h1>Project Overview</h1>
 
         <div class="block">
             <h5>Testing the API</h5>
