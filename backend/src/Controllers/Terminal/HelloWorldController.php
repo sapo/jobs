@@ -1,10 +1,10 @@
 <?php
 
-namespace SAPO\Jobs\Controllers;
+namespace SAPO\Jobs\Controllers\Terminal;
 
 use SAPO\Jobs\Application\BaseTerminalController;
 
-class TestTerminalController extends BaseTerminalController
+class HelloWorldController extends BaseTerminalController
 {
     public function execute()
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace SAPO\Jobs\Controllers;
+namespace SAPO\Jobs\Controllers\API;
 
 use SAPO\Jobs\Application\BaseAPIController;
 
-class TestApiController extends BaseAPIController
+class HelloWorldController extends BaseAPIController
 {
     public function execute()
     {
