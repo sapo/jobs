@@ -12,7 +12,6 @@
             <li>
                 <RouterLink to="/interview-objectives">
                     <i class="fas fa-info-circle"></i>
-                    
                     Interview Objectives
                 </RouterLink>
             </li>
@@ -30,6 +29,13 @@
                 <RouterLink to="/ex-vue-http-request">
                     <i class="fab fa-vuejs"></i>
                     <!-- <i class="fas fa-user-graduate"></i> -->
+                    HTTP Request
+                </RouterLink>
+            </li>
+
+            <li>
+                <RouterLink to="/ex-php-http-request">
+                    <i class="fab fa-php"></i>
                     HTTP Request
                 </RouterLink>
             </li>

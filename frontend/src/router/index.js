@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView                           from '../views/HomeView.vue'
 import InterviewObjectivesView            from '../views/InterviewObjectivesView.vue'
 import ProjectOverviewView                from '../views/ProjectOverviewView.vue'
-import HTTPRequestView                    from '../views/Exercises/HTTPRequestView.vue'
+import VueHTTPRequestView                 from '../views/Exercises/VueHTTPRequestView.vue'
+import PHPHTTPRequestView                 from '../views/Exercises/PHPHTTPRequestView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,14 +29,14 @@ const router = createRouter({
     {
       path: '/ex-vue-http-request',
       name: 'ex-vue-http-request',
-      component: HTTPRequestView
+      component: VueHTTPRequestView
     },
 
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   component: () => import('../views/AboutView.vue')
-    // }
+    {
+      path: '/ex-php-http-request',
+      name: 'ex-php-http-request',
+      component: PHPHTTPRequestView
+    },
   ]
 })
 
