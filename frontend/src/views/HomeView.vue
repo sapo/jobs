@@ -61,7 +61,7 @@
         </p>
 
         <div class="code">
-            <p>docker exec -it docker_sapo_php_1 bash </p>
+            <p>docker exec -it sapo_interview_php bash </p>
             <p>cd /project</p>
         </div>
 
@@ -80,7 +80,7 @@
         </p>
 
         <div class="code">
-            <p>docker exec docker_sapo_php_1 php /project/bin/hello-world.php</p>
+            <p>docker exec dsapo_interview_php php /project/bin/hello-world.php</p>
         </div>
 
         <p>
