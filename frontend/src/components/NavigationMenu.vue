@@ -25,11 +25,21 @@
 
             <li class="header">Exercises</li>
 
+
             <li>
                 <RouterLink to="/ex-vue-http-request">
                     <i class="fab fa-vuejs"></i>
                     <!-- <i class="fas fa-user-graduate"></i> -->
                     HTTP Request
+                </RouterLink>
+            </li>
+
+
+            <li>
+                <RouterLink to="/ex-php-dog-error-fix">
+                    <i class="fab fa-php"></i>
+                    <!-- <i class="fas fa-user-graduate"></i> -->
+                    Dog Error Fix
                 </RouterLink>
             </li>
 
@@ -39,6 +49,7 @@
                     HTTP Request
                 </RouterLink>
             </li>
+
         </ul>
     </div>
 </template>
