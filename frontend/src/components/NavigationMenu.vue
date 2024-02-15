@@ -16,12 +16,12 @@
                 </RouterLink>
             </li>
 
-            <li>
+            <!-- <li>
                 <RouterLink to="/backend-overview">
                     <i class="fab fa-php"></i>
                     Backend Overview
                 </RouterLink>
-            </li>
+            </li> -->
 
 
             <!-- <li>
