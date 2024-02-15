@@ -1,8 +1,8 @@
 <?php
 
-use SAPO\Jobs\Controllers\API\DisplayInformation;
+use SAPO\Jobs\Controllers\API\DisplayInformationController;
 
 require_once '/project/src/defines.php';
 
-$controller = new DisplayInformation();
+$controller = new DisplayInformationController();
 $controller->execute();

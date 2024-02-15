@@ -62,17 +62,25 @@
 
         <div class="code">
             <p>docker exec -it docker_sapo_php_1 bash </p>
-            <p>cd /project </p>
+            <p>cd /project</p>
         </div>
 
         <p>
-            All the runnable CLI Applications are located in the /project/cli folder. <br>
+            All the runnable CLI Applications are located in the /project/bin folder. <br>
             To execute the Hello World CLI Application, run the following command inside the docker container terminal:
         </p>
 
         <div class="code">
-            <p>cd /procect/bin </p>
+            <p>cd /project/bin </p>
             <p>php hello-world.php </p>
+        </div>
+
+        <p>
+            You can also run the command outside the container by typing the following command in the host terminal:
+        </p>
+
+        <div class="code">
+            <p>docker exec docker_sapo_php_1 php /project/bin/hello-world.php</p>
         </div>
 
         <p>
@@ -91,4 +99,3 @@
 <script setup>
 
 </script>
-
