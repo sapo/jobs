@@ -13,6 +13,9 @@
                     <li>Switch the text of the button between "Hide Div" and "Show Div" accordingly.</li>
                 </ul>
             </div>
+
+            <h5>Results</h5>
+
             <div class="quote">
                 <p>Hide me after click</p>
             </div>

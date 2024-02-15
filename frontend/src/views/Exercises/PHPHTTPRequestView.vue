@@ -5,10 +5,15 @@
         <div class="block">
             <h5>Exercise</h5>
             <p>
-                Open the file bin/http-request.php and write code to call the API endpoint 
-                <a target="blank" href="http://localhost:9980/display-information.php">http://localhost:9980/display-information.php</a>
-                and display the data in the terminal.
+                Open the file <code>bin/http-request.php</code> and write code:
             </p>
+
+            <div class="code">
+                <ul>
+                    <li>Make an HTTP request to the API endpoint  <code> <a target="blank" href="http://localhost:9980/display-information.php">http://localhost:9980/display-information.php</a></code>.</li>
+                    <li>Display the data in the terminal.</li>
+                </ul>
+            </div>
 
             <p>
                 Execute the script by entering the following command in the terminal to access the docker container terminal.
@@ -18,6 +23,8 @@
                 <p>cd /procect/bin </p>
                 <p>php http-request.php</p>
             </div>
+
+
         </div>
     </main>
 </template>

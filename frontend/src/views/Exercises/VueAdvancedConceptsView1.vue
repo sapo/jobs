@@ -23,8 +23,7 @@
                 <p> list_items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5']; </p>
             </div>
 
-            <p>Display the component below.</p>
-
+            <h5>Results</h5>
         </div>
 
     </main>
