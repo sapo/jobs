@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "PHP: XDebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9999,
+            "log" : false,
+            "pathMappings": {
+                "/var/www/html" : "${workspaceRoot}/backend/public",
+                "/project"      : "${workspaceRoot}/backend",
+            }
+        },
+
+
+        {
+            "name": "Vuejs: chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8000/",
+            "webRoot": "${workspaceFolder}/frontend",
+            "breakOnLoad": true,
+        },
+    ]
+}
