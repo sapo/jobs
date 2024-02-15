@@ -15,6 +15,15 @@ services:
           - ./../backend/:/project/
           - ./../backend/public/:/var/www/html/
 
+    sapo_node:
+      build: ./node/
+      volumes:
+        - ./../frontend/:/var/www/html/
+      working_dir: /var/www/html/
+      ports:
+        - "8000:8000"
+      tty: true
+
     sapo_db:
       image: mysql
       restart: always
