@@ -181,6 +181,12 @@ main .block .quote {
   font-size: 13px;
 }
 
+main .block ul {
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+
+
 main .block .code p,
 main .block .quote p {
   margin: 0;
@@ -191,7 +197,7 @@ main .block .quote p {
 
 main .block .quote {
   background: #eee;
-  border-left: 3px solid #7ab800;
+  border-left: 3px solid #00a2ff;
   color: #555;
 }
 
@@ -244,6 +250,14 @@ code {
 main .error {
   border-left: 3px solid #a70202;
   color: #a70202;
+  padding: 10px;
+  margin: 10px 0;
+  background: #eee;
+}
+
+main .success {
+  border-left: 3px solid #567e06;
+  color: #567e06;
   padding: 10px;
   margin: 10px 0;
   background: #eee;
