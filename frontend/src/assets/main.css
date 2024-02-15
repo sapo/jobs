@@ -100,6 +100,13 @@ a {
   color: #777;
 }
 
+#navigation_menu li.header {
+  margin: 0;
+  padding: 10px 0 5px;
+  color: #555;
+  font-weight: bold;
+  font-size: 14px;
+}
 
 #navigation_menu h3 {
   color: #444;
@@ -142,7 +149,7 @@ main ul li {
 main p {
   padding: 0;
   margin: 0 0 12px 0;
-  line-height: 19px;
+  line-height: 25px;
 }
 
 main h3 {
@@ -161,7 +168,7 @@ main h4 {
 
 main h5 {
   margin: 0 0 10px 0;
-  padding: 7px 0;
+  padding: 0 0 7px 0;
   font-size: 15px;
 }
 
@@ -178,7 +185,7 @@ main .block .code p,
 main .block .quote p {
   margin: 0;
   padding: 2px 0;
-  line-height: 15px;
+  line-height: 17px;
 }
 
 
@@ -195,4 +202,49 @@ main .block .code {
 
 main a {
   color: #7ab800;
+}
+
+
+main .table-50 div {
+  display: table;
+  width: 50%;
+}
+
+main .table-50 .row {
+  display:table-row;
+  width:auto;
+}
+
+
+main .table-50 .cell
+{
+    float:left;/*fix for  buggy browsers*/
+    display:table-column;
+    width:200px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 10px 0;
+  border: none;
+  background: #7ab800;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+code {
+  background: #f3f3f3;
+  padding: 1px 4px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+}
+
+main .error {
+  border-left: 3px solid #a70202;
+  color: #a70202;
+  padding: 10px;
+  margin: 10px 0;
+  background: #eee;
 }
