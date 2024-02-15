@@ -16,12 +16,12 @@
                 </RouterLink>
             </li>
 
-            <li>
-                <RouterLink to="/project-overview">
-                    <i class="fas fa-file-code"></i>
-                    Project Overview
+            <!-- <li>
+                <RouterLink to="/backend-overview">
+                    <i class="fab fa-php"></i>
+                    Backend Overview
                 </RouterLink>
-            </li>
+            </li> -->
 
             <li class="header">Exercises</li>
 

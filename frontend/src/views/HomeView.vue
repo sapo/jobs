@@ -20,9 +20,6 @@
     <div class="block">
       <p>Please make sure you have the following requirements installed in your local environment before running the project:</p>
       <div class="code">
-        <p>Npm 8+</p>
-        <p>NodeJS 18+</p>
-        <p>Docker</p>
         <p>Docker Compose</p>
         <p>Composer</p>
       </div>
@@ -31,35 +28,60 @@
 
     <h3>Project Setup</h3>
 
+
     <div class="block">
-      <p>
-        Clone the repository into your local machine.<br>
-        Docker files can be found in the Docker directory.<br>
-        The vue project can be found in the frontend directory.<br>
-        And the PHP Bakend API can be found in the backend directory.<br>
-      </p>
-      <h4>Frontend Setup</h4>
+        <h5>Testing the API</h5>
+        <p> If everything is setup correctly a message "Hello World" should be displayed when calling the following endpoint:</p>
 
-      <p>Install all the node components and run the following commands:</p>
+        <div class="quote">
+            <a target="_blank" href="http://localhost:9980/hello-world.php">http://localhost:9980/hello-world.php</a>
+        </div>
 
-      <div class="code">
-        <p>cd frontend</p>
-        <p>npm install</p>
-        <p>npm run dev</p>
-      </div>
+        <h5>Public Endpoints</h5>
+        <p>
+            All the files in public folder are exposed as public HTTP endpoints. <br>
+            For example, the file test-api.php is exposed as an endpoint at the following URL:
+        </p>
+        <div class="quote">
+            <a target="_blank" href="http://localhost:9980/hello-world.php">http://localhost:9980/hello-world.php</a>
+        </div>
 
-      <p>
-        The frontend will be running on the server given by the develop tool.
-      </p>
+        <p>
+            The endpoint execution is then relayed to the HelloWorldController.php api class to process the request.
+        </p>
 
-      <h4>Backend Setup</h4>
+        <div class="quote">
+            backend/src/Controllers/API/HelloWorldController.php
+        </div>
 
-      <p>Install all the PHP and Docker components and run the following commands in the correct folders:</p>
+        <h5>Testing the CLI Terminal</h5>
+        <p>
+            To access the docker container terminal, open up a console terminal and run the command displayed below. <br>
+            All project files are mounted inside the docker container at the /project folder.
+        </p>
 
-      <div class="code">
-        <p>composer install</p>
-        <p>docker-compose up -d</p>
-      </div>
+        <div class="code">
+            <p>docker exec -it docker_sapo_php_1 bash </p>
+            <p>cd /project </p>
+        </div>
+
+        <p>
+            All the runnable CLI Applications are located in the /project/cli folder. <br>
+            To execute the Hello World CLI Application, run the following command inside the docker container terminal:
+        </p>
+
+        <div class="code">
+            <p>cd /procect/bin </p>
+            <p>php hello-world.php </p>
+        </div>
+
+        <p>
+            The cli terminal execution is then relayed to the HelloWorldController.php terminal class to process the request.
+        </p>
+
+        <div class="quote">
+            backend/src/Controllers/Terminal/HelloWorldController.php
+        </div>
     </div>
 
   </main>

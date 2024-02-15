@@ -20,11 +20,11 @@ const router = createRouter({
       component: InterviewObjectivesView
     },
 
-    {
-      path: '/project-overview',
-      name: 'project-overview',
-      component: ProjectOverviewView
-    },
+    // {
+    //   path: '/backend-overview',
+    //   name: 'backend-overview',
+    //   component: BackendOverviewView
+    // },
 
     {
       path: '/ex-vue-http-request',
