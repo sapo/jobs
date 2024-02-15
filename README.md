@@ -24,5 +24,5 @@ docker exec docker_sapo_node_1 npm install
 docker exec docker_sapo_node_1 npm run dev
 ```
 
-Open up a http://locahost:8000 to access the project
+Open up a http://localhost:8000 to access the project
 
