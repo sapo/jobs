@@ -19,6 +19,9 @@ Clone the repository into your local machine. \
 Run the following commands to install the project in the docker folder
 ```
 docker-composer up -d
+docker exec docker_sapo_php_1 composer update
+docker exec docker_sapo_node_1 npm install
+docker exec docker_sapo_node_1 npm run dev
 ```
 
 Open up a http://locahost:8000 to access the project
