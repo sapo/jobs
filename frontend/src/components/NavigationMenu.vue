@@ -63,6 +63,12 @@
                 </RouterLink>
             </li>
 
+            <li>
+                <RouterLink to="/ex-php-email-headers-parser">
+                    <i class="fab fa-php"></i>
+                    PHP Email Headers Parser
+                </RouterLink>
+            </li>
         </ul>
     </div>
 </template>

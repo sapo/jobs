@@ -7,7 +7,7 @@ import VueHTTPRequestView                 from '../views/Exercises/VueHTTPReques
 import VueBasicConceptsView1              from '../views/Exercises/VueBasicConceptsView1.vue'
 import VueBasicConceptsView2              from '../views/Exercises/VueBasicConceptsView2.vue'
 import VueAdvancedConceptsView1           from '../views/Exercises/VueAdvancedConceptsView1.vue'
-
+import PHPEmailHeadersParserView          from '../views/Exercises/PHPEmailHeadersParserView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -64,6 +64,12 @@ const router = createRouter({
       path: '/ex-php-dog-error-fix',
       name: 'ex-php-http-request',
       component: PHPDogErrorFixView
+    },
+
+    {
+      path: '/ex-php-email-headers-parser',
+      name: 'ex-php-email-headers-parser',
+      component: PHPEmailHeadersParserView
     },
   ]
 })
