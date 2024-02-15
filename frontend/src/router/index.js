@@ -18,11 +18,11 @@ const router = createRouter({
       component: InterviewObjectivesView
     },
 
-    {
-      path: '/backend-overview',
-      name: 'backend-overview',
-      component: BackendOverviewView
-    },
+    // {
+    //   path: '/backend-overview',
+    //   name: 'backend-overview',
+    //   component: BackendOverviewView
+    // },
 
     // {
     //   path: '/about',
