@@ -8,9 +8,7 @@ class EmailHeadersController extends BaseJSONAPIController
 {
     public function execute(): void
     {
-        $valid_headers = [
-            'Subject'   => 'Test Email 2',
-        ];
+        $valid_headers = [];
 
         $this->respond($valid_headers);
     }
