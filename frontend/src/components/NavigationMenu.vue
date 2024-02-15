@@ -16,21 +16,35 @@
                 </RouterLink>
             </li>
 
-            <!-- <li>
-                <RouterLink to="/backend-overview">
-                    <i class="fab fa-php"></i>
-                    Backend Overview
-                </RouterLink>
-            </li> -->
-
             <li class="header">Exercises</li>
+
+            <li>
+                <RouterLink to="/ex-vue-basic-concepts-1">
+                    <i class="fab fa-vuejs"></i>
+                    Vue Basic Concepts 1
+                </RouterLink>
+            </li>
+
+            <li>
+                <RouterLink to="/ex-vue-basic-concepts-2">
+                    <i class="fab fa-vuejs"></i>
+                    Vue Basic Concepts 2
+                </RouterLink>
+            </li>
+
+
+            <li>
+                <RouterLink to="/ex-vue-advanced-concepts-1">
+                    <i class="fab fa-vuejs"></i>
+                    Vue Advanced Concepts 1
+                </RouterLink>
+            </li>
 
 
             <li>
                 <RouterLink to="/ex-vue-http-request">
                     <i class="fab fa-vuejs"></i>
-                    <!-- <i class="fas fa-user-graduate"></i> -->
-                    HTTP Request
+                    Vue HTTP Request
                 </RouterLink>
             </li>
 
@@ -38,15 +52,14 @@
             <li>
                 <RouterLink to="/ex-php-dog-error-fix">
                     <i class="fab fa-php"></i>
-                    <!-- <i class="fas fa-user-graduate"></i> -->
-                    Dog Error Fix
+                    PHP Dog Error Fix
                 </RouterLink>
             </li>
 
             <li>
-                <RouterLink to="/ex-php-http-request">
+                <RouterLink to="/ex-php-request">
                     <i class="fab fa-php"></i>
-                    HTTP Request
+                    PHP HTTP Request
                 </RouterLink>
             </li>
 

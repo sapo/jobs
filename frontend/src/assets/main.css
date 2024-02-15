@@ -181,6 +181,12 @@ main .block .quote {
   font-size: 13px;
 }
 
+main .block ul {
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+
+
 main .block .code p,
 main .block .quote p {
   margin: 0;

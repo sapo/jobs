@@ -14,7 +14,7 @@
                 Execute the script by entering the following command in the terminal to access the docker container terminal.
             </p>
             <div class="code">
-                <p>docker exec -it docker_sapo_php_1 bash </p>
+                <p>docker exec -it sapo_interview_php bash </p>
                 <p>cd /procect/bin </p>
                 <p>php http-request.php</p>
             </div>
