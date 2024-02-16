@@ -11,6 +11,7 @@
             <div class="code">
                 <ul>
                     <li>Return the params name, action and X-Token sent by the http request below.</li>
+                    <li>Click on Call API button to validate the results.</li>
                 </ul>
             </div>
 
