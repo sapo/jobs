@@ -6,7 +6,7 @@
             <h5>Exercise</h5>
 
             <p>
-                Open up the file <code>frontend/src/views/Exercises/VueBasicConceptsView1.vue</code> and write vue code to:
+                Open up the file <code>frontend/src/views/Exercises/VueBasicConcepts1View.vue</code> and write vue code to:
             </p>
 
             <div class="code">

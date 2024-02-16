@@ -5,7 +5,7 @@
         <div class="block">
             <h5>Exercise</h5>
 
-            <p>Open up the file <code>frontend/src/views/Exercises/VueBasicConceptsView2.vue</code> and write vue code to:</p>
+            <p>Open up the file <code>frontend/src/views/Exercises/VueBasicConcepts2View.vue</code> and write vue code to:</p>
             <div class="code">
                 <ul>
                     <li>Hide the div below when the button is clicked.</li>
