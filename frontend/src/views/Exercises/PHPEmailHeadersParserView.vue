@@ -43,7 +43,7 @@
                 <ul>
                     <li v-for="value, name in validation.valid" :key="name">{{name}} {{value}} </li>
                 </ul>
-                </div>
+            </div>
 
                 <p class="error" v-if="validation.success === false">
                     <span>Invalid Headers</span>

@@ -10,10 +10,12 @@ class SimpleRequestController extends BaseJSONAPIController
     {
         $action = null;
         $name   = null;
+        $token  = null;
 
         $this->respond([
             'action' => $action,
             'name'   => $name,
+            'token'  => $token,
         ]);
     }
 }

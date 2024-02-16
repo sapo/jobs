@@ -12,15 +12,38 @@ class HTTPService {
    *
    * @param {String} endpoint   server endpoint
    * @param {Object} data       post data key => value
-
+   * @param {Object} headers    request headers
    * @returns {Promise<HTTPResponseItem>}
    */
-  async post(endpoint, data) {
-    let item = new HTTPResponseItem();
+  async post(endpoint, data, headers = {}) {
     let params   = {
       method: "POST",
-      body  :  JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+        ...headers,
+      },
+      body:  JSON.stringify(data),
     };
+
+    return await this.call(endpoint, params);
+  }
+
+  async postFormData(endpoint, data, headers = {}) {
+    let params   = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        ...headers,
+      },
+      body:  new URLSearchParams(data).toString(),
+    };
+
+    return await this.call(endpoint, params);
+  }
+
+
+  async call(endpoint, params = {}) {
+    let item = new HTTPResponseItem();
 
     try {
       let response = await fetch(endpoint, params);

@@ -8,7 +8,6 @@
                 </RouterLink>
             </li>
 
-
             <li>
                 <RouterLink to="/interview-objectives">
                     <i class="fas fa-info-circle"></i>
@@ -17,6 +16,14 @@
             </li>
 
             <li class="header">Exercises</li>
+
+            <li>
+                <RouterLink to="/ex-php-http-concepts-1">
+                    <i class="fab fa-php"></i>
+                    PHP HTTP Concepts
+                </RouterLink>
+            </li>
+
 
             <li>
                 <RouterLink to="/ex-vue-basic-concepts-1">
