@@ -16,12 +16,17 @@ Docker Compose
 
 ## Project Setup
 Clone the repository into your local machine. \
-Run the following commands to install the project in the docker folder
+Run the following command in the docker folder to start all the containers
 ```
 docker-compose up -d
-docker exec sapo_interview_php_1 composer update
-docker exec sapo_interview_node_1 npm install
-docker exec sapo_interview_node_1 npm run dev
+```
+
+Run the following commands in order after all containers have started
+
+```
+docker exec sapo_interview_php composer update
+docker exec sapo_interview_node npm install
+docker exec sapo_interview_node npm run dev
 ```
 
 Open up a http://localhost:8000 to access the project
