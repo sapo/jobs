@@ -32,6 +32,12 @@
                 <p>name=John</p>
             </div>
 
+            <p> Expected payload sent by the server</p>
+
+            <div class="quote">
+                <p> {{ JSON.stringify(params) }}</p>
+            </div>
+
             <h5>Results</h5>
 
             <div class="success" v-if="validation.valid">
