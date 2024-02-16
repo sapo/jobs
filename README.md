@@ -16,7 +16,7 @@ Docker Compose
 
 ## Project Setup
 Clone the repository into your local machine. \
-Run the following command in the docker folder to start all the containers \
+Run the following command in the docker folder to start all the containers
 ```
 docker-compose up -d
 ```
