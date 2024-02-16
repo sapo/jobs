@@ -10,9 +10,8 @@ class SQLGetUserController extends BaseJSONAPIController
     public function execute(): void
     {
         $mysql  = new MySQLDatabase();
-        $result = $mysql->pdo->query("SELECT * FROM users where id = {$_POST['id']}");
+        $result = $mysql->pdo->query("SELECT * FROM users where id = {$_GET['id']}");
         $users  = $result->fetchAll(\PDO::FETCH_ASSOC);
-
         $this->respond($users);
     }
 }

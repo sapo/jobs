@@ -9,6 +9,7 @@ import VueBasicConcepts2View              from '../views/Exercises/VueBasicConce
 import VueAdvancedConcepts1View           from '../views/Exercises/VueAdvancedConcepts1View.vue'
 import PHPEmailHeadersParserView          from '../views/Exercises/PHPEmailHeadersParserView.vue'
 import PHPHTTPConcepts1View               from '../views/Exercises/PHPHTTPConcepts1View.vue'
+import PHPSecurityConcepts1View           from '../views/Exercises/PHPSecurityConcepts1View.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,6 +31,14 @@ const router = createRouter({
       name: 'ex-php-http-concepts-1',
       component: PHPHTTPConcepts1View
     },
+
+
+    {
+      path: '/ex-php-security-concepts-1',
+      name: 'ex-php-security-concepts-1',
+      component: PHPSecurityConcepts1View
+    },
+
 
     {
       path: '/ex-vue-basic-concepts-1',

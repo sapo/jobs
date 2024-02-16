@@ -24,6 +24,12 @@
                 </RouterLink>
             </li>
 
+            <li>
+                <RouterLink to="/ex-php-security-concepts-1">
+                    <i class="fab fa-php"></i>
+                    PHP Security Concepts
+                </RouterLink>
+            </li>
 
             <li>
                 <RouterLink to="/ex-vue-basic-concepts-1">
