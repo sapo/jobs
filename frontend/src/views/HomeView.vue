@@ -37,6 +37,17 @@
             <a target="_blank" href="http://localhost:9980/hello-world.php">http://localhost:9980/hello-world.php</a>
         </div>
 
+        <h5>Testing the Database</h5>
+
+        <p>
+            The project is using a MySQL database. The database is already created and the tables are already populated with data. <br>
+            To test the database, you can access the following endpoint to retrieve a user by id:
+        </p>
+    
+        <div class="quote">
+            <a target="_blank" href="http://localhost:9980/sql-get-user.php?id=1">http://localhost:9980/sql-get-user.php?id=1</a>
+        </div>
+
         <h5>Public Endpoints</h5>
         <p>
             All the files in public folder are exposed as public HTTP endpoints. <br>
