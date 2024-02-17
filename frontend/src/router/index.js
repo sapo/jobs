@@ -12,6 +12,7 @@ import PHPAdvancedConceptsView            from '@/views/AdvancedConcepts/PHPHTTP
 import VUEAdvancedConceptsView            from '@/views/AdvancedConcepts/VUEListComponentView.vue'
 
 import PHPProblemSolvingView              from '@/views/ProblemSolving/PHPEmailHeadersParserView.vue'
+import VUEProblemSolvingView              from '@/views/ProblemSolving/VUEArrowSelectionView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -80,11 +81,11 @@ const router = createRouter({
               name: 'php-problem-solving',
               component: PHPProblemSolvingView,
             },
-            // {
-            //   path: 'vue-problem-solving',
-            //   name: 'vue-problem-solving',
-            //   component: VUEProblemSolvingView,
-            // },
+            {
+              path: 'vue-problem-solving',
+              name: 'vue-problem-solving',
+              component: VUEProblemSolvingView,
+            },
           ]
         }
       ]

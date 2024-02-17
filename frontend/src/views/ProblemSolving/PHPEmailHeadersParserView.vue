@@ -5,13 +5,13 @@
         <div class="block">
             <h5>Exercise</h5>
             <p>
-                Open up the file <code>backend/src/Controllers/API/EmailHeadersParser.php</code> and write PHP code to:
+                Open up the file <code>backend/src/Controllers/API/EmailHeadersController.php</code> and write PHP code to:
 
                 <div class="code">
                     <ul>
-                        <li>Receive the data sent by the request when clicked in the button below.</li>
-                        <li>Parse all the email the headers from the request and remove all invalid headers.</li>
-                        <li>Return all valid headers and drop all invalid headers in a JSON payload indexed by header name => header value.</li>
+                        <li>Read the file email-headers.txt located at <code>backend/metadata/email-headers.txt</code></li>
+                        <li>Read the file line by line and parse all the headers in the file to remove all invalid headers.</li>
+                        <li>Return only the valid headers in a JSON payload indexed by header name => header value.</li>
                     </ul>
                 </div>
             </p>
@@ -19,9 +19,9 @@
             <p>Parse the headers according to this rules</p>
             <div class="code">
                 <ul>
-                    <li>The name and value are always separated by comma ":", everything above the comma is considered a value</li>
-                    <li>The name can not have any spaces</li>
-                    <li>Only one header per line is allowed</li>
+                    <li>The name and value are always separated by comma ":", everything after the comma is considered a value.</li>
+                    <li>The name of the header can not have any spaces.</li>
+                    <li>Only one header per line is allowed.</li>
                     <li>The valid headers end at the block --END--</li>
                 </ul>
             </div>
