@@ -1,4 +1,0 @@
-- http only cookies
-- Injections SQL
-- Textarea XSS Refletido
-- API 
