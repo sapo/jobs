@@ -9,7 +9,7 @@ import SecurityBasicConceptsView          from '@/views/BasicConcepts/PHPSQLInje
 import PHPErrorHandlingView               from '@/views/ErrorHandling/PHPDogErrorFixView.vue'
 
 import PHPAdvancedConceptsView            from '@/views/AdvancedConcepts/PHPHTTPRequestView.vue'
-import VUEAdvancedConceptsView            from '@/views/AdvancedConcepts/VUEListComponentView.vue'
+import VUEAdvancedConceptsView            from '@/views/AdvancedConcepts/VUEHTTPRequestView.vue'
 
 import PHPProblemSolvingView              from '@/views/ProblemSolving/PHPEmailHeadersParserView.vue'
 import VUEProblemSolvingView              from '@/views/ProblemSolving/VUEArrowSelectionView.vue'

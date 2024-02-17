@@ -193,7 +193,6 @@ main .block ul {
   padding: 0 0 0 15px;
 }
 
-
 main .block .code p,
 main .block .quote p {
   margin: 0;
@@ -268,4 +267,9 @@ main .success {
   padding: 10px;
   margin: 10px 0;
   background: #eee;
+}
+
+
+.active {
+  color:  #7ab800;
 }
