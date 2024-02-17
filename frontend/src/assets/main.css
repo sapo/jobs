@@ -98,6 +98,7 @@ a {
 #navigation_menu ul li i {
   padding: 5px;
   color: #777;
+  width: 18px;
 }
 
 #navigation_menu li.header {

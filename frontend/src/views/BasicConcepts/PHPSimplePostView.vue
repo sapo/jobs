@@ -1,6 +1,6 @@
 <template>
     <main>
-        <h1>PHP HTTP Concepts</h1>
+        <h1>PHP Simple Post</h1>
 
         <div class="block">
             <h5>Exercise</h5>

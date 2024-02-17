@@ -1,12 +1,12 @@
 <template>
     <main>
-        <h1>Vue Advanced Concepts 1</h1>
+        <h1>Vue List Component</h1>
 
         <div class="block">
             <h5>Exercise</h5>
 
             <p>
-                Open up the file <code>frontend/src/views/Exercises/VueAdvancedConcepts1View.vue</code> to write vue code to:
+                Open up the file <code>frontend/src/views/AdvancedConcepts/VueListComponentView.vue</code> to write vue code to:
             </p>
 
             <div class="code">

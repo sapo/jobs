@@ -1,15 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView                           from '../views/HomeView.vue'
+import ProjectInformationView             from '../views/ProjectInformationView.vue'
 import InterviewObjectivesView            from '../views/InterviewObjectivesView.vue'
-import PHPDogErrorFixView                 from '../views/Exercises/PHPDogErrorFixView.vue'
-import PHPHTTPRequestView                 from '../views/Exercises/PHPHTTPRequestView.vue'
-import VueHTTPRequestView                 from '../views/Exercises/VueHTTPRequestView.vue'
-import VueBasicConcepts1View              from '../views/Exercises/VueBasicConcepts1View.vue'
-import VueBasicConcepts2View              from '../views/Exercises/VueBasicConcepts2View.vue'
-import VueAdvancedConcepts1View           from '../views/Exercises/VueAdvancedConcepts1View.vue'
-import PHPEmailHeadersParserView          from '../views/Exercises/PHPEmailHeadersParserView.vue'
-import PHPHTTPConcepts1View               from '../views/Exercises/PHPHTTPConcepts1View.vue'
-import PHPSecurityConcepts1View           from '../views/Exercises/PHPSecurityConcepts1View.vue'
+
+import PHPBasicConceptsView               from '@/views/BasicConcepts/PHPSimplePostView.vue'
+import VUEBasicConceptsView               from '@/views/BasicConcepts/VUEDivToggleView.vue'
+import SecurityBasicConceptsView          from '@/views/BasicConcepts/PHPSQLInjectionView.vue'
+
+import PHPErrorHandlingView               from '@/views/ErrorHandling/PHPDogErrorFixView.vue'
+
+import PHPAdvancedConceptsView            from '@/views/AdvancedConcepts/PHPHTTPRequestView.vue'
+import VUEAdvancedConceptsView            from '@/views/AdvancedConcepts/VUEListComponentView.vue'
+
+import PHPProblemSolvingView              from '@/views/ProblemSolving/PHPEmailHeadersParserView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,69 +19,85 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
-    },
+      redirect:'/project-information',
+      children: [
+        {
+          path: 'basic-concepts',
+          redirect: 'basic-concepts/php-basic-concepts',
+          children : [
+            {
+              path: 'php-basic-concepts',
+              name: 'php-basic-concepts',
+              component: PHPBasicConceptsView,
+            },
+            {
+              path: 'vue-basic-concepts',
+              name: 'vue-basic-concepts',
+              component: VUEBasicConceptsView,
+            },
+            {
+              path: 'security-basic-concepts',
+              name: 'security-basic-concepts',
+              component: SecurityBasicConceptsView,
+            }
+          ]
+        },
+        {
+          path: 'error-handling',
+          redirect: 'error-handling/php-error-handling',
+          children : [
+            {
+              path: 'php-error-handling',
+              name: 'php-error-handling',
+              component: PHPErrorHandlingView,
+            },
+          ]
+        },
 
+        {
+          path: 'advanced-concepts',
+          redirect: 'advanced-concepts/php-advanced-concepts',
+          children : [
+            {
+              path: 'php-advanced-concepts',
+              name: 'php-advanced-concepts',
+              component: PHPAdvancedConceptsView,
+            },
+            {
+              path: 'vue-advanced-concepts',
+              name: 'vue-advanced-concepts',
+              component: VUEAdvancedConceptsView,
+            },
+          ]
+        },
+
+        {
+          path: 'problem-solving',
+          redirect: 'problem-solving/php-problem-solving',
+          children : [
+            {
+              path: 'php-problem-solving',
+              name: 'php-problem-solving',
+              component: PHPProblemSolvingView,
+            },
+            // {
+            //   path: 'vue-problem-solving',
+            //   name: 'vue-problem-solving',
+            //   component: VUEProblemSolvingView,
+            // },
+          ]
+        }
+      ]
+    },
+    {
+      path: '/project-information',
+      name: 'project-information',
+      component: ProjectInformationView,
+    },
     {
       path: '/interview-objectives',
       name: 'backend-hello-world',
       component: InterviewObjectivesView
-    },
-
-    {
-      path: '/ex-php-http-concepts-1',
-      name: 'ex-php-http-concepts-1',
-      component: PHPHTTPConcepts1View
-    },
-
-
-    {
-      path: '/ex-php-security-concepts-1',
-      name: 'ex-php-security-concepts-1',
-      component: PHPSecurityConcepts1View
-    },
-
-
-    {
-      path: '/ex-vue-basic-concepts-1',
-      name: 'ex-vue-basic-concepts-1',
-      component: VueBasicConcepts1View
-    },
-
-    {
-      path: '/ex-vue-basic-concepts-2',
-      name: 'ex-vue-basic-concepts-2',
-      component: VueBasicConcepts2View
-    },
-
-    {
-      path: '/ex-vue-advanced-concepts-1',
-      name: 'ex-vue-advanced-concepts-1',
-      component: VueAdvancedConcepts1View
-    },
-
-    {
-      path: '/ex-vue-http-request',
-      name: 'ex-vue-http-request',
-      component: VueHTTPRequestView
-    },
-
-    {
-      path: '/ex-php-request',
-      name: 'ex-php-request',
-      component: PHPHTTPRequestView
-    },
-
-    {
-      path: '/ex-php-dog-error-fix',
-      name: 'ex-php-http-request',
-      component: PHPDogErrorFixView
-    },
-
-    {
-      path: '/ex-php-email-headers-parser',
-      name: 'ex-php-email-headers-parser',
-      component: PHPEmailHeadersParserView
     },
   ]
 })

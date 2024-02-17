@@ -16,9 +16,9 @@
 </template>
 
 <script setup>
-  import { RouterLink, RouterView } from 'vue-router'
-  import TopBar                     from './components/TopBar.vue'
-  import NavigationMenu             from './components/NavigationMenu.vue'
+  import {RouterView }  from 'vue-router'
+  import TopBar         from './components/TopBar.vue'
+  import NavigationMenu from './components/NavigationMenu.vue'
 </script>
 
 <style scoped>

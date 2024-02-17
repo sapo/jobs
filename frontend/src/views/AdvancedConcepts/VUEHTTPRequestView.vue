@@ -5,7 +5,7 @@
         <div class="block">
             <h5>Exercise</h5>
             <p>
-                Open up the file <code>frontend/src/views/Exercises/VueHTTPRequestView.vue</code> and write vue code to: 
+                Open up the file <code>frontend/src/views/AdvancedConcepts/VueHTTPRequestView.vue</code> and write vue code to:
 
                 <div class="code">
                     <ul>

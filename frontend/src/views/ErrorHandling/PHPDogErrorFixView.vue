@@ -5,9 +5,8 @@
         <div class="block">
             <h5>Exercise</h5>
             <p>
-                Open up the file <code>backend/public/animal-dog.php</code> and fix any errors encountered allong the way so that the API returns a propper JSON response.
+               Fix any backend API errors encountered so that the API returns a propper JSON response.
             </p>
-
 
             <div class="code">
                 <ul>
