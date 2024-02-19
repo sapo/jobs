@@ -1,5 +1,5 @@
 <template>
-    <h1>PHP Simple Post</h1>
+    <h1>PHP Simple Input</h1>
 
     <div class="block">
         <h5>Exercise</h5>
@@ -10,7 +10,7 @@
         <div class="code">
             <ul>
                 <li>Return the params name, action and X-Token sent by the http request below.</li>
-                <li>Set a cookie with the name session_token and the value token_1</li>
+                <li>Set a cookie with the name session_id and the value 12345</li>
                 <li>Click on Call API button to validate the results.</li>
             </ul>
         </div>
@@ -29,7 +29,7 @@
             <p> </p>
             <p> </p>
             <p> </p>
-            <p>name=John</p>
+            <p>{"name":"John"}</p>
         </div>
 
         <p> Expected payload sent by the server</p>
@@ -84,13 +84,13 @@
     }
 
     const onCallAPI = async () => {
-        response.value = await HTTPService.postFormData(
+        response.value = await HTTPService.post(
             'http://localhost:9980/simple-request.php?action=simple',
             {'name': params.name},
             {'X-Token': params.token}
         );
 
         validation.value = ValidateData.requiredValues(response.value.results, params);
-        cookie.value     = ValidateData.requiredCookie('session_token=token_1');
+        cookie.value     = ValidateData.requiredCookie('session_id=12345');
     }
 </script>

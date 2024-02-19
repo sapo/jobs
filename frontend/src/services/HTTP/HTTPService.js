@@ -18,6 +18,7 @@ class HTTPService {
   async post(endpoint, data, headers = {}) {
     let params   = {
       method: "POST",
+      credentials: 'include',
       headers: {
         "Content-Type": "application/json",
         ...headers,
@@ -31,6 +32,7 @@ class HTTPService {
   async postFormData(endpoint, data, headers = {}) {
     let params   = {
       method: "POST",
+      credentials: 'include',
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
         ...headers,
