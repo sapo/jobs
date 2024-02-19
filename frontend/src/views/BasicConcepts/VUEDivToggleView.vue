@@ -28,7 +28,7 @@
         </CustomBlock>
     </div>
 
-    <h5>Results</h5>
+    <h3>Results</h3>
     <div class="block">
         <CustomBlock
             title='Toggle Visibility'
