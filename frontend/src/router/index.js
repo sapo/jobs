@@ -14,6 +14,8 @@ import VUEAdvancedConceptsView            from '@/views/AdvancedConcepts/VUEHTTP
 import PHPProblemSolvingView              from '@/views/ProblemSolving/PHPEmailHeadersParserView.vue'
 import VUEProblemSolvingView              from '@/views/ProblemSolving/VUEArrowSelectionView.vue'
 
+import BasicConceptsView                  from '@/views/BasicConcepts/BasicConceptsView.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -23,8 +25,8 @@ const router = createRouter({
       redirect:'/project-information',
       children: [
         {
-          path: 'basic-concepts',
-          redirect: 'basic-concepts/php-basic-concepts',
+          path: 'basic-concepts/:exercise',
+          component: BasicConceptsView,
           children : [
             {
               path: 'php-basic-concepts',

@@ -10,7 +10,9 @@
     </div>
 
     <div id="wrapper_right">
-      <RouterView />
+      <main>
+        <RouterView />
+      </main>
     </div>
   </div>
 </template>
