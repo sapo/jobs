@@ -1,6 +1,4 @@
 <template>
-
-  <main>
     <h1>Project Information</h1>
 
     <div class="block">
@@ -102,9 +100,6 @@
             backend/src/Controllers/Terminal/HelloWorldController.php
         </div>
     </div>
-
-  </main>
-
 </template>
 
 <script setup>

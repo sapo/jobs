@@ -18,6 +18,7 @@ a {
   display: flex;
   align-items: center;
   height: 50px;
+  z-index: 100;
 }
 
 #top_bar .logo {
@@ -176,10 +177,10 @@ main h5 {
 
 main .block .code,
 main .block .quote {
-  padding: 10px;
+  padding: 15px;
   background: #282c34;
   color: #fff;
-  margin: 0 0 12px 0;
+  margin: 15px 0;
   font-size: 13px;
 }
 
@@ -240,7 +241,7 @@ button {
   padding: 8px 12px;
   margin: 10px 0;
   border: none;
-  background: #7ab800;
+  background: #1c1e21;
   color: #FFFFFF;
   cursor: pointer;
   font-size: 15px;
