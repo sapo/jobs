@@ -124,15 +124,14 @@ main {
 main h1 {
   padding: 0px 10px;
   margin: 0;
-  border-left: 2px solid #ccc;
-  border-bottom: 2px solid #ccc;
-  color: #555;
-
+  border-left: 2px solid #1c1e21;
+  border-bottom: 2px solid #1c1e21;
+  color: #1c1e21;
 }
 
 main .block {
   margin: 10px 0;
-  padding: 12px 12px 1px 12px;
+  padding: 16px 16px 6px 16px;
   background: #f9f9f9;
   font-size: 14px;
 }
@@ -149,15 +148,17 @@ main ul li {
 
 main p {
   padding: 0;
-  margin: 0 0 12px 0;
-  line-height: 25px;
+  margin: 0;
+  line-height: 18px;
+  font-size: 14px;
 }
 
 main h3 {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #1c1e21;
   margin: 0 0 5px 0;
   padding: 0px 0 3px 2px;
   margin: 0;
+  color: #1c1e21
 }
 
 main h4 {
@@ -269,7 +270,18 @@ main .success {
   background: #eee;
 }
 
-
 .active {
   color:  #7ab800;
+}
+
+
+/** New Components **/
+
+.exercise-block code {
+  background: #f6f6f6;
+  padding: 1px 4px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 13px;
+  color: #222;
 }
