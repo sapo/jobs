@@ -2,27 +2,50 @@
     <h1>Vue Div Toggle</h1>
 
     <div class="block">
-        <h5>Exercise</h5>
+        <CustomBlock
+            class="clean-block"
+        >
+            <template #content>
+                <p>
+                    This is a simple example of how to toggle the visibility of a div using Vue.
+                </p>
+            </template>
+        </CustomBlock>
 
-        <p>Open up the file <code>frontend/src/views/BasicConcepts/VueDivToggleView.vue</code> and write vue code to:</p>
-        <div class="code">
-            <ul>
-                <li>Hide the div below when the button is clicked.</li>
-                <li>Display the div below when the button is clicked again.</li>
-                <li>Switch the text of the button between "Hide Div" and "Show Div" accordingly.</li>
-            </ul>
-        </div>
 
-        <h5>Results</h5>
+        <CustomBlock
+            title='Exercise'
+            class="exercise-block"
+        >
+            <template #content>
+                <ul>
+                    <li>Open up the file <code>frontend/src/views/BasicConcepts/VueDivToggleView.vue</code></li>
+                    <li>Hide the div below when the button is clicked.</li>
+                    <li>Display the div below when the button is clicked again.</li>
+                    <li>Switch the text of the button between "Hide Div" and "Show Div" accordingly.</li>
+                </ul>
+            </template>
+        </CustomBlock>
+    </div>
 
-        <div class="quote">
-            <p>Hide me after click</p>
-        </div>
+    <h5>Results</h5>
+    <div class="block">
+        <CustomBlock
+            title='Toggle Visibility'
+            class="results-block"
+        >
+            <template #content>
+                <div class="quote">
+                    <p>Hide me after click</p>
+                </div>
 
-        <button>Hide Div</button>
+                <button @click="onCallAPI()">Hide Div</button>
+            </template>
+        </CustomBlock>
     </div>
 </template>
 
 <script setup>
+    import CustomBlock from '@/templates/blocks/CustomBlock.vue';
 
 </script>

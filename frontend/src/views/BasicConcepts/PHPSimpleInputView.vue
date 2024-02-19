@@ -7,7 +7,10 @@
         >
             <template #content>
                 <p>
-                    A simple HTTP request is sent to the sent to the server and then reflected back to the client.
+                    In this exercise, we will send a simple HTTP request to the server and test the response for valid params and cookies.
+                </p>
+                <p>
+                    The server is expected to return the params name, action and X-Token sent by the http request in json format.
                 </p>
             </template>
         </CustomBlock>
@@ -62,7 +65,7 @@
         </CustomBlock>
     </div>
 
-        <h3>Results</h3>
+    <h3>Results</h3>
 
     <div class="block">
         <CustomBlock
@@ -119,7 +122,6 @@
         </CustomBlock>
     </div>
 </template>
-
 
 <script setup>
     import { ref }      from 'vue';

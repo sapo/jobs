@@ -2,69 +2,127 @@
     <h1>PHP Simple Post</h1>
 
     <div class="block">
-        <h5>Exercise</h5>
-        <p>
-            Open up the file <code>backend/src/Controllers/API/SimpleRequestController.php</code> and write PHP code to:
-        </p>
 
-        <div class="code">
-            <ul>
-                <li>Return the params name, action and X-Token sent by the http request below.</li>
-                <li>Set a cookie with the name session_token and the value token_1</li>
-                <li>Click on Call API button to validate the results.</li>
-            </ul>
-        </div>
+        <CustomBlock
+            class="clean-block"
+        >
+            <template #content>
+                <p>
+                    In this exercise, we will send a simple HTTP request to the server and test the response for valid params and cookies.
+                </p>
+                <p>
+                    The server is expected to return the params name, action and X-Token sent by the http request in json format.
+                </p>
+            </template>
+        </CustomBlock>
 
-        <p>HTTP Request data beeing sent to the server</p>
 
-        <div class="quote">
-            <p>POST /simple-request.php?action=simple HTTP/1.1</p>
-            <p>Accept: */*</p>
-            <p>Connection: keep-alive</p>
-            <p>Content-Length: 9</p>
-            <p>Content-Type: application/x-www-form-urlencoded</p>
-            <p>Host: localhost:9980</p>
-            <p>X-Token: token_id_01</p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p>name=John</p>
-        </div>
+        <CustomBlock
+            title='Exercise'
+            class="exercise-block"
+        >
+            <template #content>
+                <ul>
+                    <li>Open up the file <code>backend/src/Controllers/API/SimpleRequestController.php</code></li>
+                    <li>Return the params name, action and X-Token sent by the http request below.</li>
+                    <li>Set a cookie with the name session_token and the value token_1</li>
+                    <li>Click on Call API button to validate the results.</li>
+                </ul>
+            </template>
+        </CustomBlock>
 
-        <p> Expected payload sent by the server</p>
 
-        <div class="quote">
-            <p> {{ JSON.stringify(params) }}</p>
-        </div>
+        <CustomBlock
+            class="clean-block"
+        >
+            <template #content>
+                <p> When the user clicks on the button below, the following HTTP request is sent to the server:</p>
 
-        <h5>Results</h5>
+                <div class="quote">
+                    <p>POST /simple-request.php?action=simple HTTP/1.1</p>
+                    <p>Accept: */*</p>
+                    <p>Connection: keep-alive</p>
+                    <p>Content-Length: 9</p>
+                    <p>Content-Type: application/x-www-form-urlencoded</p>
+                    <p>Host: localhost:9980</p>
+                    <p>X-Token: token_id_01</p>
+                    <p> </p>
+                    <p> </p>
+                    <p> </p>
+                    <p> </p>
+                    <p>name=John</p>
+                </div>
+            </template>
+        </CustomBlock>
 
-        <div class="success" v-if="validation.valid">
-            <p>Valid params in response</p>
-            <ul>
-                <li v-for="value in validation.valid" :key="value">{{value}}</li>
-            </ul>
-        </div>
+        <CustomBlock
+            class="clean-block"
+        >
+            <template #content>
+                <p>The expected response from the server after the params are retrevied is:</p>
 
-        <div class="error" v-if="validation.invalid">
-            <p>Invalid params in response</p>
-            <ul>
-                <li v-for="value in validation.invalid" :key="value">{{value}}</li>
-            </ul>
-        </div>
+                <div class="quote">
+                    <p> {{ JSON.stringify(params) }}</p>
+                </div>
+            </template>
+        </CustomBlock>
+    </div>
 
-        <div class="success" v-if="cookie.valid === true">
-            <p>Valid Cookie</p>
-            <p>Cookie: {{ cookie.cookie }} </p>
-        </div>
+    <h3>Results</h3>
 
-        <div class="error" v-if="cookie.valid === false">
-            <p>Invalid Cookie</p>
-            <p>Cookie: {{ cookie.cookie }} </p>
-        </div>
+    <div class="block">
+        <CustomBlock
+                title='HTTP Request'
+                class="results-block"
+            >
+            <template #content>
+                <button @click="onCallAPI()">Call API</button>
+            </template>
+        </CustomBlock>
 
-        <button @click="onCallAPI()">Call API</button>
+        <CustomBlock v-if="validation.valid"
+            title='Valid Params'
+            class="success-block"
+        >
+            <template #content>
+                <ul>
+                    <li v-for="value in validation.valid" :key="value">{{value}}</li>
+                </ul>
+            </template>
+        </CustomBlock>
+
+        <CustomBlock v-if="validation.invalid"
+                title='Invalid Params'
+                class="error-block"
+            >
+            <template #content>
+                <ul>
+                    <li v-for="value in validation.invalid" :key="value">{{value}}</li>
+                </ul>
+            </template>
+        </CustomBlock>
+
+        <CustomBlock v-if="cookie.valid === true"
+                title='Valid Cookie'
+                class="success-block"
+            >
+            <template #content>
+                <ul>
+                    <p>Cookie: {{ cookie.cookie }} </p>
+                </ul>
+            </template>
+        </CustomBlock>
+
+        <CustomBlock v-if="cookie.valid === false"
+                title='Invalid Cookie'
+                class="error-block"
+            >
+            <template #content>
+                <ul>
+                    <p>Cookie: {{ cookie.cookie }} </p>
+                </ul>
+            </template>
+        </CustomBlock>
     </div>
 </template>
 
@@ -73,6 +131,8 @@
     import { ref }        from 'vue';
     import HTTPService    from '@/services/HTTP/HTTPService';
     import ValidateData   from '@/services/Validation/ValidateData';
+    import CustomBlock    from '@/templates/blocks/CustomBlock.vue';
+
 
     const response   = ref(null);
     const validation = ref({})
