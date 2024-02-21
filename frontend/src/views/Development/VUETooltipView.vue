@@ -44,7 +44,8 @@
         >
             <template #content>
                 <button>Display Tooltip</button>
-                <button>Display Tooltip</button>
+                <button>Display Tooltip 2</button>
+                <button>Display Tooltip 3</button>
             </template>
         </CustomBlock>
     </div>
