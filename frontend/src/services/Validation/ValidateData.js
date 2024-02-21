@@ -10,7 +10,7 @@ export default class ValidateData {
       total_count++;
 
       if (!params || params[key] !== required_values[key]) {
-        invalid[key] = params[key];
+        invalid[key] = (params && params[key]) ? params[key] : null;
         continue;
       }
 

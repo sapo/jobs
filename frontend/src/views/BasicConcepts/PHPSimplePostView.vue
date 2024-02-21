@@ -75,7 +75,7 @@
         >
             <template #content>
                 <ul>
-                    <li v-for="value in validation.valid" :key="value">{{value}}</li>
+                    <li v-for="value, name in validation.valid" :key="name">{{name}} {{value}} </li>
                 </ul>
             </template>
         </CustomBlock>
@@ -86,7 +86,7 @@
             >
             <template #content>
                 <ul>
-                    <li v-for="value in validation.invalid" :key="value">{{value}}</li>
+                    <li v-for="value, name in validation.invalid" :key="name">{{name}} {{value}} </li>
                 </ul>
             </template>
         </CustomBlock>
