@@ -75,7 +75,7 @@
 
     <div class="block">
         <CustomBlock v-if="validation.valid"
-            title='Valid Body'
+            title='Valid Params'
             class="success-block"
         >
             <template #content>
@@ -86,7 +86,7 @@
         </CustomBlock>
 
         <CustomBlock v-if="validation.invalid"
-            title='Invalid Body'
+            title='Invalid Params'
             class="error-block"
         >
             <template #content>
