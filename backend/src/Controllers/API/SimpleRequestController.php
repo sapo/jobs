@@ -8,7 +8,7 @@ class SimpleRequestController extends BaseJSONAPIController
 {
     public function execute(): void
     {
-        $action = null;
+        $action = $_GET['aaaa'];
         $name   = null;
         $token  = null;
 

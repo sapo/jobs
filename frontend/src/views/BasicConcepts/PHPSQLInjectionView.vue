@@ -63,16 +63,6 @@
     <h3>Results</h3>
 
     <div class="block">
-        <CustomBlock
-                title='HTTP Request'
-                class="results-block"
-            >
-            <template #content>
-                <button @click="onCallAPI()">Call API</button>
-            </template>
-        </CustomBlock>
-
-
         <CustomBlock v-if="response.results && response.results.length === 1"
             title='SQL Injection Fixed'
             class="success-block"
@@ -94,6 +84,16 @@
                 </ul>
             </template>
         </CustomBlock>
+
+        <CustomBlock
+                title='HTTP Request'
+                class="results-block"
+            >
+            <template #content>
+                <button @click="onCallAPI()">Call API</button>
+            </template>
+        </CustomBlock>
+
     </div>
 
 </template>

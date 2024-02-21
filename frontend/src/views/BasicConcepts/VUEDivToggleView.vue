@@ -39,7 +39,7 @@
                     <p>Hide me after click</p>
                 </div>
 
-                <button @click="onCallAPI()">Hide Div</button>
+                <button @click="onCallAPI">Hide Div</button>
             </template>
         </CustomBlock>
     </div>
@@ -48,4 +48,8 @@
 <script setup>
     import CustomBlock from '@/templates/blocks/CustomBlock.vue';
 
+
+    const onCallAPI = (event) => {
+        console.log(event);
+    }
 </script>

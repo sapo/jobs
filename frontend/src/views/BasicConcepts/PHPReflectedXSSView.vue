@@ -37,20 +37,20 @@
 
     <div class="block">
         <CustomBlock
-                title='HTTP Request'
-                class="results-block"
-            >
-            <template #content>
-                <button @click="onCallAPI()">Call API</button>
-            </template>
-        </CustomBlock>
-
-        <CustomBlock
                 title='XSS Payload'
                 class="results-block"
             >
             <template #content>
                 <div id="xss"></div>
+            </template>
+        </CustomBlock>
+
+        <CustomBlock
+                title='HTTP Request'
+                class="results-block"
+            >
+            <template #content>
+                <button @click="onCallAPI()">Call API</button>
             </template>
         </CustomBlock>
     </div>

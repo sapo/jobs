@@ -134,7 +134,4 @@
         color: #a70202;
     }
 
-    .success-block  .custom-block-content {
-        margin-left: 5px;
-    }
 </style>

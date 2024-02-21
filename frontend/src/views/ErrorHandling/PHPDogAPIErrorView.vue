@@ -2,36 +2,68 @@
     <h1>PHP Dog API Error Fix</h1>
 
     <div class="block">
-        <h5>Exercise</h5>
-        <p>
-            Fix any backend API errors encountered so that the API returns a propper JSON response.
-        </p>
+        <CustomBlock
+            class="clean-block"
+        >
+            <template #content>
+                <p>
+                    The PHP Backend API is returnings an error. Fix all possible errors in the backend API to return a valid json response with the dog's attributes.
+                </p>
+            </template>
+        </CustomBlock>
 
-        <div class="code">
-            <ul>
-                <li>Click on the button below to make an HTTP Request to the API endpoint <code><a href="http://localhost:9980/animal-dog.php" target="_blank">http://localhost:9980/animal-dog.php</a></code>.</li>
-                <li>The attributes of the dog should be displayed in div below.</li>
-            </ul>
-        </div>
+        <CustomBlock
+            title='Exercise'
+            class="exercise-block"
+        >
+            <template #content>
+                <ul>
+                    <li>Click on the button below to make an HTTP Request to the API endpoint <code><a href="http://localhost:9980/animal-dog.php" target="_blank">http://localhost:9980/animal-dog.php</a></code>.</li>
+                    <li>Fix any possible errors in the backend API.</li>
+                    <li>The attributes of the dog should be displayed below when the API call is successful.</li>
+                </ul>
+            </template>
+        </CustomBlock>
 
-        <h5>Results</h5>
+    </div>
 
-        <div class="quote" v-if="response.success === true">
-            <p>Name:  {{ response.results.name }}</p>
-            <p>Breed: {{ response.results.breed }}</p>
-        </div>
+    <h3>Results</h3>
 
-        <p class="error" v-if="response.success === false">
-            {{ response.error }}
-        </p>
+    <div class="block">
+        <CustomBlock v-if="response.success === true"
+            title='Response is valid! '
+            class="success-block"
+        >
+            <template #content>
+                <p>Name:  {{ response.results.name }}</p>
+                <p>Breed: {{ response.results.breed }}</p>
+            </template>
+        </CustomBlock>
 
-        <button @click="onCallAPI()">Call API</button>
+        <CustomBlock v-if="response.success === false"
+            title='Response is invalid! '
+            class="error-block"
+        >
+            <template #content>
+                {{ response.error }}
+            </template>
+        </CustomBlock>
+
+        <CustomBlock
+            title='HTTP Request'
+            class="results-block"
+        >
+            <template #content>
+                <button @click="onCallAPI()">Call API</button>
+            </template>
+        </CustomBlock>
     </div>
 </template>
 
 <script setup>
-    import HTTPService from '@/services/HTTP/HTTPService.js';
     import { ref }     from 'vue';
+    import HTTPService from '@/services/HTTP/HTTPService.js';
+    import CustomBlock from '@/templates/blocks/CustomBlock.vue';
 
     const response  = ref({});
 

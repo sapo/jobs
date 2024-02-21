@@ -68,15 +68,6 @@
     <h3>Results</h3>
 
     <div class="block">
-        <CustomBlock
-                title='HTTP Request'
-                class="results-block"
-            >
-            <template #content>
-                <button @click="onCallAPI()">Call API</button>
-            </template>
-        </CustomBlock>
-
         <CustomBlock v-if="validation.valid"
                 title='Valid Params'
                 class="success-block"
@@ -118,6 +109,15 @@
                 <ul>
                     <p>Cookie: {{ cookie.cookie }} </p>
                 </ul>
+            </template>
+        </CustomBlock>
+
+        <CustomBlock
+                title='HTTP Request'
+                class="results-block"
+            >
+            <template #content>
+                <button @click="onCallAPI()">Call API</button>
             </template>
         </CustomBlock>
     </div>
