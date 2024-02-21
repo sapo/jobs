@@ -1,5 +1,5 @@
 <template>
-    <h1>PHP Email Headers Parser</h1>
+    <h1>PHP Email Body Multipart Parser</h1>
 
     <div class="block">
         <CustomBlock
@@ -7,7 +7,7 @@
         >
             <template #content>
                 <p>
-                    Parse the headers from the file email-headers.txt located at <code>backend/metadata/email-headers.txt</code> and remove all invalid headers.
+                    The goal of this exercise is to parse the given email file and return the message body part delimited by the MULTIPART-ID header.
                </p>
             </template>
         </CustomBlock>
@@ -19,9 +19,9 @@
             <template #content>
                 <ul>
                     <li>Open up the file <code>backend/src/Controllers/API/EmailController.php</code></li>
-                    <li>Read the file <code>backend/metadata/email-headers.txt</code></li>
-                    <li>Parse the file line by line according to the rules list below to remove all invalid headers.</li>
-                    <li>Return only the valid headers in a JSON payload indexed by header name => header value.</li>
+                    <li>Read the file <code>backend/metadata/email-headers.txt</code> line by line to find the MULTIPART-ID header value.</li>
+                    <li>Extract the body part contents according to the rules listed below.</li>
+                    <li>Return the message body text as a JSON Payload with the format "email_body" => value,</li>
                 </ul>
             </template>
         </CustomBlock>
@@ -32,12 +32,8 @@
         >
             <template #content>
                 <ul>
-                    <li>The name and value are always separated by comma ":", everything after the comma is considered a value.</li>
-                    <li>The name of the header can not have any spaces.</li>
-                    <li>Only one header per line is allowed.</li>
-                    <li>Values empty spaces in the begginning or end of the line should be removed.</li>
-                    <li>Any '' or "" in values should be removed.</li>
-                    <li>The valid headers end at the block --END--</li>
+                    <li>The start delimiter for the body part is --{$multipart_id_value}</li>
+                    <li>The end delimiter for the body part is --{$multipart_id_value}--</li>
                 </ul>
             </template>
         </CustomBlock>
@@ -46,17 +42,18 @@
             class="clean-block"
         >
             <template #content>
-                <p> <code>email-headers.txt</code> file contents:</p>
+                <p> <code>email-body.txt</code> file contents:</p>
                 <div class="quote">
-                    <p>Subject: Email de Testes</p>
+                    <p>Subject: Test Email!</p>
                     <p>From: Sapo Support</p>
-                    <p>Invalid Header 3:</p>
                     <p>Reply-To: no-reply@sapo.pt</p>
-                    <p>Invalid Header 2: invalid@sapo.pt</p>
                     <p>Date: Thu, 9 Jun 2022 11:56:57 +0000</p>
                     <p>Message-ID: "0a9d3cf50789b9c6b1cff1011.b617e4f01a"</p>
-                    <p>--END--</p>
-                    <p>Invalid Header-3: Not valid</p>
+                    <p>MULTIPART-ID: "0ak.part.29934"</p>
+
+                    <p>--0ak.part.29934</p>
+                    <p>This is a test email!</p>
+                    <p>--0ak.part.29934--</p>
                 </div>
             </template>
         </CustomBlock>
@@ -67,19 +64,18 @@
             <template #content>
                 <p>Expected response payload sent by the server</p>
                 <div class="quote">
-                    <p> {{ JSON.stringify(valid_headers) }}</p>
+                    <p> {{ JSON.stringify(valid_payload) }}</p>
                 </div>
             </template>
         </CustomBlock>
 
     </div>
 
-
     <h3>Results</h3>
 
     <div class="block">
         <CustomBlock v-if="validation.valid"
-            title='Valid Headers'
+            title='Valid Body'
             class="success-block"
         >
             <template #content>
@@ -90,7 +86,7 @@
         </CustomBlock>
 
         <CustomBlock v-if="validation.invalid"
-            title='Invalid Headers'
+            title='Invalid Body'
             class="error-block"
         >
             <template #content>
@@ -117,19 +113,15 @@
     import CustomBlock  from '@/templates/blocks/CustomBlock.vue';
     import ValidateData from '@/services/Validation/ValidateData';
 
-    const response   = ref({});
-    const validation = ref({});
-    const valid_headers = {
-        'Subject'   : 'Test Email',
-        'From'      : 'Sapo Support',
-        'Reply-To'  : 'no-reply@sapo.pt',
-        'Date'      : 'Thu, 9 Jun 2022 11:56:57 +0000',
-        'Message-ID': '0a9d3cf50789b9c6b1cff1011.b617e4f01a',
+    const response      = ref({});
+    const validation    = ref({});
+    const valid_payload = {
+        'body': 'This is a test email!',
     }
 
     const onCallAPI = async () => {
         response.value   = await HTTPService.post('http://localhost:9980/email.php');
-        validation.value = ValidateData.requiredValues(response.value.results, valid_headers);
+        validation.value = ValidateData.requiredValues(response.value.results, valid_payload);
     }
 
 </script>

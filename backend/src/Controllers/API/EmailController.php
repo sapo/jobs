@@ -4,11 +4,11 @@ namespace SAPO\Jobs\Controllers\API;
 
 use SAPO\Jobs\Application\BaseJSONAPIController;
 
-class EmailHeadersController extends BaseJSONAPIController
+class EmailController extends BaseJSONAPIController
 {
     public function execute(): void
     {
-        $valid_headers = [];
-        $this->respond($valid_headers);
+        $response_data = [];
+        $this->respond($response_data);
     }
 }

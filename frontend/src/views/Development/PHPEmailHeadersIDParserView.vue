@@ -1,5 +1,5 @@
 <template>
-    <h1>PHP Email Headers Parser</h1>
+    <h1>PHP Email Headers Return Message ID</h1>
 
     <div class="block">
         <CustomBlock
@@ -7,7 +7,7 @@
         >
             <template #content>
                 <p>
-                    Parse the headers from the file email-headers.txt located at <code>backend/metadata/email-headers.txt</code> and remove all invalid headers.
+                    Parse the headers from the file email-headers.txt located at <code>backend/metadata/email-headers.txt</code> to return the Message-ID header value.
                </p>
             </template>
         </CustomBlock>
@@ -20,8 +20,8 @@
                 <ul>
                     <li>Open up the file <code>backend/src/Controllers/API/EmailController.php</code></li>
                     <li>Read the file <code>backend/metadata/email-headers.txt</code></li>
-                    <li>Parse the file line by line according to the rules list below to remove all invalid headers.</li>
-                    <li>Return only the valid headers in a JSON payload indexed by header name => header value.</li>
+                    <li>Parse the file line by line according to the rules list below to retrieve the given header value</li>
+                    <li>Return only the given header in a JSON payload indexed by header name => header value.</li>
                 </ul>
             </template>
         </CustomBlock>
@@ -54,7 +54,7 @@
                     <p>Reply-To: no-reply@sapo.pt</p>
                     <p>Invalid Header 2: invalid@sapo.pt</p>
                     <p>Date: Thu, 9 Jun 2022 11:56:57 +0000</p>
-                    <p>Message-ID: "0a9d3cf50789b9c6b1cff1011.b617e4f01a"</p>
+                    <p>Message-ID:  "0a9d3cf50789b9c6b1cff1011.b617e4f01a" </p>
                     <p>--END--</p>
                     <p>Invalid Header-3: Not valid</p>
                 </div>
@@ -73,7 +73,6 @@
         </CustomBlock>
 
     </div>
-
 
     <h3>Results</h3>
 
@@ -120,10 +119,6 @@
     const response   = ref({});
     const validation = ref({});
     const valid_headers = {
-        'Subject'   : 'Test Email',
-        'From'      : 'Sapo Support',
-        'Reply-To'  : 'no-reply@sapo.pt',
-        'Date'      : 'Thu, 9 Jun 2022 11:56:57 +0000',
         'Message-ID': '0a9d3cf50789b9c6b1cff1011.b617e4f01a',
     }
 
