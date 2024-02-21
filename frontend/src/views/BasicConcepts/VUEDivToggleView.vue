@@ -12,7 +12,6 @@
             </template>
         </CustomBlock>
 
-
         <CustomBlock
             title='Exercise'
             class="exercise-block"
@@ -23,6 +22,7 @@
                     <li>Hide the div below when the button is clicked.</li>
                     <li>Display the div below when the button is clicked again.</li>
                     <li>Switch the text of the button between "Hide Div" and "Show Div" accordingly.</li>
+                    <li>Emit and event with the name "ButtonClicked" with the status of div everytime the button is clicked.</li>
                 </ul>
             </template>
         </CustomBlock>
@@ -47,7 +47,6 @@
 
 <script setup>
     import CustomBlock from '@/templates/blocks/CustomBlock.vue';
-
 
     const onCallAPI = (event) => {
         console.log(event);
