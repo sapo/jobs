@@ -9,4 +9,5 @@ enum AnimalBreeds: string
     case BULLDOG  = 'Bulldog';
     case BEAGLE   = 'Beagle';
     case HUSKY    = 'Husky';
+    case BOXER    = 'Boxer';
 }

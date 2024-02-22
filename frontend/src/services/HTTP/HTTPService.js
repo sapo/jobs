@@ -50,6 +50,11 @@ class HTTPService {
     try {
       let response = await fetch(endpoint, params);
       let results  = await response.json();
+
+      if (results.error) {
+        throw new Error(results.error);
+      }
+
       item.results = results;
       item.success = true;
 
