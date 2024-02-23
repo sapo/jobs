@@ -19,7 +19,7 @@
             <template #content>
                 <ul>
                     <li>Open up the file <code>backend/src/Controllers/API/EmailController.php</code></li>
-                    <li>Read the file <code>backend/metadata/email-headers.txt</code> line by line to find the MULTIPART-ID header value.</li>
+                    <li>Read the file <code>backend/metadata/email-body.txt</code> line by line to find the MULTIPART-ID header value.</li>
                     <li>Extract the body part contents according to the rules listed below.</li>
                     <li>Return the message body text as a JSON Payload with the format "email_body" => value,</li>
                 </ul>

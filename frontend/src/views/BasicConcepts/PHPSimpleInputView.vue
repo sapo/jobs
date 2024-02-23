@@ -40,7 +40,7 @@
                     <p>Accept: */*</p>
                     <p>Connection: keep-alive</p>
                     <p>Content-Length: 9</p>
-                    <p>Content-Type: application/x-www-form-urlencoded</p>
+                    <p>Content-Type: application/json</p>
                     <p>Host: localhost:9980</p>
                     <p>X-Token: token_id_01</p>
                     <p> </p>
