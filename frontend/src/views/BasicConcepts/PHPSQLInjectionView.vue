@@ -86,11 +86,11 @@
         </CustomBlock>
 
         <CustomBlock
-                title='HTTP Request'
+                title='Test Vulnerability'
                 class="results-block"
             >
             <template #content>
-                <button @click="onCallAPI()">Call API</button>
+                <button @click="onCallAPI()">Test</button>
             </template>
         </CustomBlock>
 

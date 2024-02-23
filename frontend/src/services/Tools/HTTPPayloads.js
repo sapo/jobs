@@ -8,7 +8,7 @@ export default class HTTPPayloads
         {
             data : JSON.stringify({
                 name : 'My Image',
-                html : `<img src="x" onerror="alert('XSS!')">`
+                html : `<img src="x" onerror="alert('Vulnerable!')">`
             })
         })
     }

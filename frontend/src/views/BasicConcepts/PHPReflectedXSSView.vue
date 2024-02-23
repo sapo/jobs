@@ -26,7 +26,7 @@
         >
             <template #content>
                 <ul>
-                    <li>Open up the file <code>backend/src/Controllers/API/ReflectedXSSController.php</code></li>
+                    <li>Open up the file <code>backend/src/Controllers/API/ReflectPayloadController.php</code></li>
                     <li>Fix the XSS payload that is sent by the client and reflected back to the browser.</li>
                 </ul>
             </template>
@@ -37,7 +37,7 @@
 
     <div class="block">
         <CustomBlock
-                title='XSS Payload'
+                title='Server Response'
                 class="results-block"
             >
             <template #content>
@@ -46,11 +46,11 @@
         </CustomBlock>
 
         <CustomBlock
-                title='HTTP Request'
+                title='Test Vulnerability'
                 class="results-block"
             >
             <template #content>
-                <button @click="onCallAPI()">Call API</button>
+                <button @click="onCallAPI()">Test</button>
             </template>
         </CustomBlock>
     </div>
