@@ -144,7 +144,7 @@ main ul {
 
 main ul li {
   margin: 0;
-  padding: 2px 0;
+  padding: 4px 0;
 }
 
 main p {
@@ -183,6 +183,11 @@ main .block .quote {
   margin: 15px 0;
   font-size: 13px;
 }
+
+main .block .quote p {
+  font-size: 13px;
+}
+
 
 main .block .code code {
   color: #333;
