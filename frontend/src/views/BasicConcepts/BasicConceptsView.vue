@@ -9,6 +9,7 @@
     import PHPSimpleEmailView   from '@/views/BasicConcepts/PHPSimpleEmailView.vue';
     import PHPSQLInjectionView  from '@/views/BasicConcepts/PHPSQLInjectionView.vue';
     import PHPReflectedXSSView  from '@/views/BasicConcepts/PHPReflectedXSSView.vue';
+    import PHPSimpleAttackView  from '@/views/BasicConcepts/PHPSimpleAttackView.vue';
     import VueDivToggleView     from '@/views/BasicConcepts/VUEDivToggleView.vue';
     import VueListComponentView from '@/views/BasicConcepts/VUEListComponentView.vue';
 
@@ -18,6 +19,7 @@
         "php-sql-injection"  : PHPSQLInjectionView,
         "php-reflected-xss"  : PHPReflectedXSSView,
         "php-simple-email"   : PHPSimpleEmailView,
+        "php-simple-attack"  : PHPSimpleAttackView,
         "vue-div-toggle"     : VueDivToggleView,
         "vue-list-component" : VueListComponentView,
     }
