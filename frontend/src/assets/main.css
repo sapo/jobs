@@ -254,6 +254,11 @@ button {
   border-radius: 5px;
 }
 
+button[disabled] {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
 code {
   background: #f3f3f3;
   padding: 1px 4px;

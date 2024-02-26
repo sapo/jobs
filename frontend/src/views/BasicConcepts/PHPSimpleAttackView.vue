@@ -6,7 +6,9 @@
             class="clean-block"
         >
             <template #content>
-  
+                <p>
+                    This is a simple attack that will try to find the valid code by calling an API 50 times with different codes.
+                </p>
             </template>
         </CustomBlock>
 
@@ -17,30 +19,11 @@
         >
             <template #content>
                 <ul>
-      
+                    <li>Open up the file <code>backend/src/Controllers/API/SimpleAttackController.php</code></li>
+                    <li>
+                        Write some code to prevent the attack from finding the correct code.
+                    </li>
                 </ul>
-            </template>
-        </CustomBlock>
-
-        <CustomBlock
-            class="clean-block"
-        >
-            <template #content>
-                <p> 
- 
-                </p>
-            </template>
-        </CustomBlock>
-
-        <CustomBlock
-            class="clean-block"
-        >
-            <template #content>
-                <p>The expected response from the server after the params are retrevied is:</p>
-
-                <div class="quote">
-                    <p> {{ JSON.stringify(params) }}</p>
-                </div>
             </template>
         </CustomBlock>
     </div>
@@ -71,11 +54,14 @@
         </CustomBlock>
 
         <CustomBlock
-                title='HTTP Request'
+                title='Find Code'
                 class="results-block"
             >
             <template #content>
-                <button @click="onCallAPI()">Call API</button>
+                <button @click="onCallAPI()" :disabled="loading">
+                    <i v-if="loading" class="fas fa-spinner fa-spin"></i>
+                    Test
+                </button>
             </template>
         </CustomBlock>
     </div>
@@ -88,17 +74,21 @@
     import CustomBlock from '@/templates/blocks/CustomBlock.vue';
 
     const found  = ref(null);
-    const code   = ref(700);
+    const code   = ref();
     const tries  = 50;
+    const loading = ref(false);;
 
     const onCallAPI = async () => {
-        found.value = null;
+        found.value   = null;
+        code.value    = 700;
+        loading.value = true;
 
         for (let i = 0; i < tries; i++) {
             let response = await callAPI(code.value);
 
             if (response === true) {
-                found.value = true;
+                loading.value = false;
+                found.value   = true;
                 return;
             }
 
@@ -106,6 +96,7 @@
         }
 
         found.value = false;
+        loading.value = false;
     }
 
     const callAPI = async (code) => {
