@@ -1,22 +1,34 @@
 export default class ValidateData {
   static requiredValues(params, required_values = {}) {
-    let missing = [];
-    let valid   = [];
+    let invalid     = {};
+    let valid       = {};
+    let valid_count = 0;
+    let total_count = 0;
 
 
     for (let key in required_values) {
+      total_count++;
+
       if (!params || params[key] !== required_values[key]) {
-        missing.push(key);
+        invalid[key] = (params && params[key]) ? params[key] : null;
         continue;
       }
 
-      valid.push(key);
+      valid[key] = params[key];
+      valid_count++;
     }
 
-
     return {
-      missing: missing,
-      valid: valid,
+      success: valid.length === total_count,
+      invalid: invalid,
+      valid  : valid,
+    }
+  }
+
+  static requiredCookie(value) {
+    return {
+      cookie: document.cookie,
+      valid : document.cookie.includes(value),
     }
   }
 }
