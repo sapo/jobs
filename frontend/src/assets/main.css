@@ -63,7 +63,8 @@ a {
   margin-left: 250px;
   padding:0;
   background-color: #FFFFFF;
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
+  height: 100%;
 }
 
 #navigation_menu {
@@ -282,10 +283,6 @@ main .success {
   background: #eee;
 }
 
-.active {
-  color:  #7ab800;
-}
-
 
 /** New Components **/
 
@@ -296,4 +293,37 @@ main .success {
   border-radius: 2px;
   font-size: 13px;
   color: #222;
+}
+
+main .exercise-list ul {
+  padding: 0;
+  background: #FFF;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+main .exercise-list ul li {
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+main .exercise-list ul li:hover {
+  background: #f5f5f5;
+}
+
+main .exercise-list ul li .text {
+  display: block;
+}
+
+main .exercise-list ul li .small {
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+}
+
+main .exercise-list ul li.active {
+  background:  #dcff97;
 }

@@ -1,5 +1,5 @@
 <template>
-    <h1>Vue Arrow Selection</h1>
+    <h1>Vue Select and Delete Users</h1>
 
     <div class="block">
 
@@ -8,7 +8,7 @@
         >
             <template #content>
                 <p>
-                    Use the arrows to navigate through the list below.
+                    Select the users you want to delete and remove them from the list.
                 </p>
             </template>
         </CustomBlock>
@@ -20,9 +20,17 @@
             <template #content>
                 <ul>
                     <li>Open up the file <code>frontend/src/views/ProblemSolving/VUEArrowSelectionView.vue</code></li>
-                    <li>Activate the first line in the list when the ArrowDown key is pressed by setting the class <code>active</code></li>
-                    <li>Activate the next line and remove the previous activation in the list when the ArrowDown key is pressed.</li>
-                    <li>Go back to the first line when reaching the end of the list.</li>
+                    <li>
+                        Click on the users you want to delete and press the "Delete" button to remove them from the list.
+                    </li>
+
+                    <li>
+                        Set the class <code>active</code> on all selected users.
+                    </li>
+
+                    <li>
+                        Remove the selected users from the list when the "Delete" button is pressed.
+                    </li>
                 </ul>
             </template>
         </CustomBlock>
@@ -32,14 +40,23 @@
 
     <div class="block">
         <CustomBlock
+            title='Delete Selected Users'
+            class="results-block"
+        >
+            <template #content>
+                <button @click="onDelete()">Delete</button>
+            </template>
+        </CustomBlock>
+
+
+        <CustomBlock
             class="clean-block"
         >
             <template #content>
-                <UsersList :users="users" />
+                 <UsersList :users="users" />
             </template>
         </CustomBlock>
     </div>
-
 </template>
 
 <script setup>
