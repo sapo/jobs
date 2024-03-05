@@ -13,13 +13,15 @@ class HTTPService {
    * @param {String} endpoint   server endpoint
    * @param {Object} data       post data key => value
    * @param {Object} headers    request headers
+   * @param {String} method     request method
+   *
    * @returns {Promise<HTTPResponseItem>}
    */
-  async post(endpoint, data, headers = {}) {
+  async post(endpoint, data, headers = {}, method = "POST") {
     let params   = {
-      method: "POST",
+      method     : method,
       credentials: 'include',
-      headers: {
+      headers    : {
         "Content-Type": "application/json",
         ...headers,
       },
@@ -28,6 +30,29 @@ class HTTPService {
 
     return await this.call(endpoint, params);
   }
+
+   /**
+   * Makes a get request to the backend api
+   *
+   * @public
+   *
+   * @since 7.0.0
+   *
+   * @param {String} endpoint   server endpoint
+   *
+   * @returns {Promise<HTTPResponseItem>}
+   */
+     async get(endpoint) {
+      let params   = {
+        method     : 'GET',
+        headers    : {
+          "Content-Type": "application/json",
+        },
+      };
+
+      return await this.call(endpoint, params);
+    }
+
 
   async postFormData(endpoint, data, headers = {}) {
     let params   = {

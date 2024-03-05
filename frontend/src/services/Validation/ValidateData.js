@@ -19,7 +19,7 @@ export default class ValidateData {
     }
 
     return {
-      success: valid.length === total_count,
+      success: valid_count === total_count,
       invalid: invalid,
       valid  : valid,
     }

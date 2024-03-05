@@ -12,10 +12,14 @@
     import PHPSimpleAttackView  from '@/views/BasicConcepts/PHPSimpleAttackView.vue';
     import VueDivToggleView     from '@/views/BasicConcepts/VUEDivToggleView.vue';
     import VueListComponentView from '@/views/BasicConcepts/VUEListComponentView.vue';
+    import PHPSimpleGetView     from '@/views/BasicConcepts/PHPSimpleGetView.vue';
+    import PHPSimplePutView     from '@/views/BasicConcepts/PHPSimplePutView.vue';
 
     const exercicies = {
+        "php-simple-get"     : PHPSimpleGetView,
         "php-simple-post"    : PHPSimplePostView,
         "php-simple-input"   : PHPSimpleInputView,
+        "php-simple-put"     : PHPSimplePutView,
         "php-sql-injection"  : PHPSQLInjectionView,
         "php-reflected-xss"  : PHPReflectedXSSView,
         "php-simple-email"   : PHPSimpleEmailView,

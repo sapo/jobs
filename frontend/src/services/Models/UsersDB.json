@@ -1,10 +1,26 @@
 [
     {
-        "id": 1,
-        "age": 25,
-        "name": "John",
-        "city": "New York",
-        "state": "NY"
+        "id": 10,
+        "age": 31,
+        "name": "Daniel",
+        "city": "Denver",
+        "state": "CO"
+    },
+
+    {
+        "id": 8,
+        "age": 33,
+        "name": "David",
+        "city": "Austin",
+        "state": "TX"
+    },
+
+    {
+        "id": 7,
+        "age": 27,
+        "name": "Emily",
+        "city": "Seattle",
+        "state": "WA"
     },
     {
         "id": 2,
@@ -14,13 +30,6 @@
         "state": "CA"
     },
     {
-        "id": 3,
-        "age": 35,
-        "name": "Jim",
-        "city": "Chicago",
-        "state": "IL"
-    },
-    {
         "id": 4,
         "age": 40,
         "name": "Jill",
@@ -28,11 +37,18 @@
         "state": "TX"
     },
     {
-        "id": 5,
-        "age": 28,
-        "name": "Sarah",
-        "city": "San Francisco",
-        "state": "CA"
+        "id": 3,
+        "age": 35,
+        "name": "Jim",
+        "city": "Chicago",
+        "state": "IL"
+    },
+    {
+        "id": 1,
+        "age": 25,
+        "name": "John",
+        "city": "New York",
+        "state": "NY"
     },
     {
         "id": 6,
@@ -42,20 +58,6 @@
         "state": "MA"
     },
     {
-        "id": 7,
-        "age": 27,
-        "name": "Emily",
-        "city": "Seattle",
-        "state": "WA"
-    },
-    {
-        "id": 8,
-        "age": 33,
-        "name": "David",
-        "city": "Austin",
-        "state": "TX"
-    },
-    {
         "id": 9,
         "age": 29,
         "name": "Olivia",
@@ -63,10 +65,10 @@
         "state": "FL"
     },
     {
-        "id": 10,
-        "age": 31,
-        "name": "Daniel",
-        "city": "Denver",
-        "state": "CO"
+        "id": 5,
+        "age": 28,
+        "name": "Sarah",
+        "city": "San Francisco",
+        "state": "CA"
     }
 ]

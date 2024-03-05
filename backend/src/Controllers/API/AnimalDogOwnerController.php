@@ -10,7 +10,7 @@ use SAPO\Jobs\Utils\FileLogger;
 
 abstract AnimalDogOwnerController extends BaseJSONAPIController
 {
-    private function execute(): void
+    private function execute(): array
     {
         $logger = new FileLogger();
         $mysql  = new MySQLDatabase();
