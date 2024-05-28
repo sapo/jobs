@@ -1,33 +1,15 @@
 # Sapo Interview Projects
 
-## VUE - PHP - MySQL
+This is a pre-interview project repository designed to assess your skills in different languages. The project involves setting up a local development environment using Docker and Docker Compose.
 
-This is a simple interview project application made in Vue 3 composition API with a PHP Backend API integration used to retrieve information.
+The project covers fundamental concepts of a proggraming languafe, including API integration, database interaction, and basic security practices.
 
-This project covers many of the fundamental concepts of Vue.js development, including component-based architecture, state management, routing, form handling, and API integration. It's a simple project, but it requires a good understanding of Vue.js and modern frontend development practices.
+## Requirements
+Before you start, ensure you have Docker and Docker Compose installed on your machine. These are necessary to set up and run the project.
 
-It also covers many of the fundamental concepts of PHP development, including API development, database interaction, and basic security practices.
+### PHP & Vue 3 Project
+For PHP and Vue 3 project interviews please refer to the PHP/Vue wiki page: https://github.com/sapo/jobs/wiki/PHP
 
-#### Requirements
-```
-Docker
-Docker Compose
-```
-
-## Project Setup
-Clone the repository into your local machine. \
-Run the following command in the docker folder to start all the containers
-```
-docker-compose up -d
-```
-
-Run the following commands in order after all containers have started
-
-```
-docker exec sapo_interview_php composer update
-docker exec sapo_interview_node npm install
-docker exec sapo_interview_node npm run dev
-```
-
-Open up a http://localhost:8000 to access the project
+### Python/Django
+For Python and Django project interviews please refer to the Python/Django wiki page: https://github.com/sapo/jobs/wiki/Python
 
