@@ -2,7 +2,7 @@
 
 This is a pre-interview project repository designed to assess your skills in different languages. The project involves setting up a local development environment using Docker and Docker Compose.
 
-The project covers fundamental concepts of a proggraming languafe, including API integration, database interaction, and basic security practices.
+The project covers fundamental concepts of a programming language, including API integration, database interaction, and basic security practices.
 
 ## Requirements
 Before you start, ensure you have Docker and Docker Compose installed on your machine. These are necessary to set up and run the project.
