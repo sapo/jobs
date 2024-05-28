@@ -43,3 +43,17 @@ services:
       volumes:
         - ./mysql/sql-data:/var/lib/mysql
         - ./mysql/schema:/docker-entrypoint-initdb.d
+
+
+    sapo_python:
+      container_name: sapo_interview_python
+      build: ./python/
+      volumes:
+        - ./python/project/:/project/
+      ports:
+        - "8001:8001"
+      tty: true
+      command: >
+        sh -c "python source/manage.py collectstatic --noinput &&
+          python source/manage.py migrate &&
+          python source/manage.py runserver 0.0.0.0:8001"
